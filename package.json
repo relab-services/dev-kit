@@ -5,6 +5,7 @@
     "graph": "nx graph"
   },
   "devDependencies": {
+    "@changesets/cli": "2.27.5",
     "nx": "19.2.2"
   }
 }

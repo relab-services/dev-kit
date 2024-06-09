@@ -9,7 +9,7 @@ import process from 'process'
 export const pinoStreams: () => pino.DestinationStream | pino.StreamEntry<string> | (pino.DestinationStream | pino.StreamEntry<string>)[] = () => {
     const result = [
         {
-            level: process.env.LOG_LEVEL ?? 'info',
+            level: process.env.LOG_LEVEL || 'info',
             stream: pretty({
                 colorize: true,
                 messageFormat: '{if area}\x1b[33m[{area}] {end}\x1b[94m{msg}',
@@ -23,7 +23,7 @@ export const pinoStreams: () => pino.DestinationStream | pino.StreamEntry<string
             process.env.SERVICE_NAME || JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'), { encoding: 'utf-8' })).name
 
         result.push({
-            level: process.env.LOKI_LOG_LEVEL ?? 'warn',
+            level: process.env.LOKI_LOG_LEVEL || 'warn',
             stream: pino.transport<LokiOptions>({
                 target: 'pino-loki',
                 options: {

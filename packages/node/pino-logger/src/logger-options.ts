@@ -2,7 +2,7 @@ import { LoggerOptions } from 'pino'
 import process from 'process'
 
 export const loggerOptions: LoggerOptions = {
-    level: process.env.LOG_LEVEL,
+    level: process.env.LOG_LEVEL || 'info',
     mixin: (mergeObject: object, level: number) => {
         const result: Record<string, unknown> = {}
 

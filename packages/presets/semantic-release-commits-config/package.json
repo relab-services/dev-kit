@@ -1,0 +1,48 @@
+{
+    "name": "@relab/semantic-release-commits-config",
+    "version": "0.0.0-development",
+    "description": "semantic-release shareable config defines standards for commit name conventions",
+    "packageManager": "pnpm@9.1.4",
+    "main": "index.js",
+    "files": [
+        "index.js"
+    ],
+    "scripts": {
+        "semantic-release": "semantic-release",
+        "lint": "eslint . --ext js",
+        "format": "prettier --write \"*.{js,json,md}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/relab-services/dev-kit.git"
+    },
+    "keywords": [
+        "semantic-release"
+    ],
+    "author": "Sergey Zwezdin <sergey@zwezdin.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/relab-services/dev-kit/issues"
+    },
+    "homepage": "https://github.com/relab-services/dev-kit#readme",
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
+    "prettier": "@relab/prettier-config",
+    "eslintConfig": {
+        "extends": "@relab/eslint-config/node"
+    },
+    "devDependencies": {
+        "@relab/eslint-config": "workspace:*",
+        "@relab/prettier-config": "workspace:*",
+        "@types/node": "20.14.2",
+        "eslint": "8.57.0",
+        "typescript": "5.4.5"
+    },
+    "dependencies": {
+        "@semantic-release/commit-analyzer": "13.0.0",
+        "@semantic-release/release-notes-generator": "14.0.0",
+        "conventional-changelog-conventionalcommits": "8.0.0"
+    }
+}

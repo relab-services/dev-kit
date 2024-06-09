@@ -1,0 +1,36 @@
+{
+  "name": "@relab/prettier-config",
+  "version": "1.1.2",
+  "description": "Shareable prettier configuration",
+  "packageManager": "pnpm@9.1.4",
+  "main": "prettierrc.json",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relab-services/dev-kit.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "prettierrc.json"
+  ],
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "author": "Sergey Zwezdin <sergey@zwezdin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/relab-services/dev-kit/issues"
+  },
+  "homepage": "https://github.com/relab-services/dev-kit#readme",
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "prettier": "3.1.1"
+  },
+  "devDependencies": {
+    "eslint": "8"
+  }
+}

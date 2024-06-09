@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Custom
+
+.DS_Store
+.idea
+lib
+.nx/cache
+.nx/workspace-data/d

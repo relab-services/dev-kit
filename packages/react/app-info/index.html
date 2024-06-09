@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@relab/app-info</title>
+    <script type="module">
+        import { displayAppInfo } from './lib/index.js'
+        displayAppInfo('Default', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7',
+            'Empty section 1': undefined,
+            'Empty section 2': null,
+            'Empty section 3': '',
+            'Empty section 4': '   ',
+        })
+
+        displayAppInfo('W/O Start Time', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            printStartTime: false
+        })
+
+        displayAppInfo('Blue', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Blue'
+        })
+
+        displayAppInfo('Cyan', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Cyan'
+        })
+
+        displayAppInfo('Emerald', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Emerald'
+        })
+
+        displayAppInfo('Gray', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Gray'
+        })
+
+        displayAppInfo('Green', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Green'
+        })
+
+        displayAppInfo('Indigo', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Indigo'
+        })
+
+        displayAppInfo('Lime', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Lime'
+        })
+
+        displayAppInfo('Orange', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Orange'
+        })
+
+        displayAppInfo('Pink', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Pink'
+        })
+
+        displayAppInfo('Purple', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Purple'
+        })
+
+        displayAppInfo('Zinc', {
+            Version: '1.0.0',
+            Commit: 'e8c97b69084b65a2b728528ad7a2aab5de7869bc',
+            Branch: 'refs/heads/master',
+            'Build Number': '7'
+        }, {
+            theme: 'Zinc'
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

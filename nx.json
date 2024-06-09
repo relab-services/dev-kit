@@ -1,0 +1,21 @@
+{
+  "taskRunnerOptions": {
+    "default": {
+      "runner": "nx/task-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "inputs": ["{projectRoot}/**/*", "!{projectRoot}/**/*.md"],
+      "dependsOn": ["^build"],
+      "outputs": [
+        "{projectRoot}/lib",
+        "{projectRoot}/dist"
+      ],
+      "cache": true
+    }
+  }
+}

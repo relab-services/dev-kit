@@ -1,0 +1,46 @@
+{
+  "name": "@relab/eslint-config",
+  "version": "2.2.2",
+  "description": "Shareable configuration for eslint",
+  "packageManager": "pnpm@9.1.4",
+  "scripts": {},
+  "files": [
+    "node.js",
+    "next.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relab-services/dev-kit.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Sergey Zwezdin (sergey@zwezdin.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/relab-services/dev-kit/issues"
+  },
+  "homepage": "https://github.com/relab-services/dev-kit#readme",
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "@typescript-eslint/eslint-plugin": "7.12.0",
+    "@typescript-eslint/parser": "7.12.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard-with-typescript": "43.0.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-n": "17.8.1",
+    "eslint-plugin-promise": "6.2.0",
+    "eslint-plugin-react": "7.34.2",
+    "typescript": "5.4.5"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8"
+  }
+}

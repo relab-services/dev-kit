@@ -1,0 +1,894 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.2.2",
+  "deps": {
+    "nx": "19.2.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".npmrc",
+        "hash": "1499268308230608855"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "1237926339901021888"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "16053105512509194568"
+      },
+      {
+        "file": "package.json",
+        "hash": "13621123544165060490"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "18302683726302901140"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10380417622302738356"
+      },
+      {
+        "file": ".nxignore",
+        "hash": "345689974343109087"
+      }
+    ],
+    "projectFileMap": {
+      "@relab/react-modals": [
+        {
+          "file": "packages/react/react-modals/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/react/react-modals/package.json",
+          "hash": "8248695104945508980",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/react-modals/rollup.config.mjs",
+          "hash": "11939714949044535930"
+        },
+        {
+          "file": "packages/react/react-modals/src/build.ts",
+          "hash": "381269551485531749"
+        },
+        {
+          "file": "packages/react/react-modals/src/components/component.tsx",
+          "hash": "15447855368670589100"
+        },
+        {
+          "file": "packages/react/react-modals/src/components/container.tsx",
+          "hash": "14141574137300257229"
+        },
+        {
+          "file": "packages/react/react-modals/src/components/index.ts",
+          "hash": "4668264835380161562"
+        },
+        {
+          "file": "packages/react/react-modals/src/events/eventEmitter.ts",
+          "hash": "8239184093935725641"
+        },
+        {
+          "file": "packages/react/react-modals/src/events/index.ts",
+          "hash": "12100563032743217047"
+        },
+        {
+          "file": "packages/react/react-modals/src/events/mountEvent.ts",
+          "hash": "5888339045684813219"
+        },
+        {
+          "file": "packages/react/react-modals/src/events/unmountEvent.ts",
+          "hash": "3858676372741413503"
+        },
+        {
+          "file": "packages/react/react-modals/src/index.ts",
+          "hash": "976456765895581273"
+        },
+        {
+          "file": "packages/react/react-modals/src/registry.ts",
+          "hash": "12221546638275649161"
+        },
+        {
+          "file": "packages/react/react-modals/src/types/component.ts",
+          "hash": "11616991738390397753"
+        },
+        {
+          "file": "packages/react/react-modals/src/types/definition.ts",
+          "hash": "6653235107668859535"
+        },
+        {
+          "file": "packages/react/react-modals/src/types/index.ts",
+          "hash": "14631940533790038122"
+        },
+        {
+          "file": "packages/react/react-modals/src/types/params.ts",
+          "hash": "8106667948057005784"
+        },
+        {
+          "file": "packages/react/react-modals/src/types/props.ts",
+          "hash": "2568122082031017646"
+        },
+        {
+          "file": "packages/react/react-modals/src/types/result.ts",
+          "hash": "6158939048593994994"
+        },
+        {
+          "file": "packages/react/react-modals/tsconfig.json",
+          "hash": "13932642360857140806"
+        }
+      ],
+      "@relab/fastify-kit-health-check": [
+        {
+          "file": "packages/fastify/fastify-kit-health-check/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-health-check/package.json",
+          "hash": "15824118683583162569",
+          "deps": [
+            "@relab/fastify-kit",
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:fastify",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript",
+            "@relab/fastify-health-check"
+          ]
+        },
+        {
+          "file": "packages/fastify/fastify-kit-health-check/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-health-check/src/index.ts",
+          "hash": "13968859512393760596"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-health-check/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/semantic-release-commits-config": [
+        {
+          "file": "packages/presets/semantic-release-commits-config/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/presets/semantic-release-commits-config/index.js",
+          "hash": "6847474347742679920"
+        },
+        {
+          "file": "packages/presets/semantic-release-commits-config/package.json",
+          "hash": "6114609395264278162",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:typescript",
+            "npm:@semantic-release/commit-analyzer",
+            "npm:@semantic-release/release-notes-generator",
+            "npm:conventional-changelog-conventionalcommits"
+          ]
+        },
+        {
+          "file": "packages/presets/semantic-release-commits-config/tsconfig.json",
+          "hash": "10728987531609871160"
+        }
+      ],
+      "@relab/app-info": [
+        {
+          "file": "packages/react/app-info/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/react/app-info/docs/demo.png",
+          "hash": "6944561832909961127"
+        },
+        {
+          "file": "packages/react/app-info/docs/themes.png",
+          "hash": "3587575455469241273"
+        },
+        {
+          "file": "packages/react/app-info/index.html",
+          "hash": "12966063055892041615"
+        },
+        {
+          "file": "packages/react/app-info/package.json",
+          "hash": "4923341252253307298",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:serve",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/app-info/rollup.config.mjs",
+          "hash": "3979030414866993868"
+        },
+        {
+          "file": "packages/react/app-info/src/index.ts",
+          "hash": "3698670942282934841"
+        },
+        {
+          "file": "packages/react/app-info/tsconfig.json",
+          "hash": "7417003145844775617"
+        }
+      ],
+      "@relab/pino-logger": [
+        {
+          "file": "packages/node/pino-logger/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/node/pino-logger/package.json",
+          "hash": "14653808507986568997",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:pino",
+            "npm:pino-loki",
+            "npm:pino-pretty"
+          ]
+        },
+        {
+          "file": "packages/node/pino-logger/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/node/pino-logger/src/index.ts",
+          "hash": "14829435015640398650"
+        },
+        {
+          "file": "packages/node/pino-logger/src/logger-options.ts",
+          "hash": "6456962222191820357"
+        },
+        {
+          "file": "packages/node/pino-logger/src/pino-streams.ts",
+          "hash": "15746747423103482557"
+        },
+        {
+          "file": "packages/node/pino-logger/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/eslint-config": [
+        {
+          "file": "packages/presets/eslint-config/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/presets/eslint-config/next.js",
+          "hash": "75046532694388387"
+        },
+        {
+          "file": "packages/presets/eslint-config/node.js",
+          "hash": "15593526906465111633"
+        },
+        {
+          "file": "packages/presets/eslint-config/package.json",
+          "hash": "14287798315001928014",
+          "deps": [
+            "npm:eslint",
+            "npm:@types/node",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint-config-next",
+            "npm:eslint-config-prettier",
+            "npm:eslint-config-standard-with-typescript",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-n",
+            "npm:eslint-plugin-promise",
+            "npm:eslint-plugin-react",
+            "npm:typescript"
+          ]
+        }
+      ],
+      "@relab/fastify-kit-api-key": [
+        {
+          "file": "packages/fastify/fastify-kit-api-key/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-api-key/package.json",
+          "hash": "16918389494691868858",
+          "deps": [
+            "@relab/fastify-kit",
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:fastify",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/fastify/fastify-kit-api-key/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-api-key/src/index.ts",
+          "hash": "1345433805674230728"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-api-key/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/fastify-kit-swagger": [
+        {
+          "file": "packages/fastify/fastify-kit-swagger/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/package.json",
+          "hash": "11323308845852383554",
+          "deps": [
+            "@relab/fastify-kit",
+            "@relab/fastify-kit-errors-handling",
+            "npm:fastify-type-provider-zod",
+            "npm:zod",
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:fastify",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:@fastify/swagger",
+            "npm:@scalar/api-reference",
+            "npm:zod-to-json-schema"
+          ]
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/src/index.ts",
+          "hash": "10855511474767626647"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/src/ref.ts",
+          "hash": "15669703350425244650"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/src/schema-transform.ts",
+          "hash": "10142733567909549926"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/src/swagger.ts",
+          "hash": "16829658437401760352"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/src/ui.ts",
+          "hash": "9726355216855869545"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-swagger/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/node-welcome": [
+        {
+          "file": "packages/node/node-welcome/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/node/node-welcome/package.json",
+          "hash": "12339176090861463658",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/fastify-kit",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:ansi-colors",
+            "npm:boxen@4.2.0"
+          ]
+        },
+        {
+          "file": "packages/node/node-welcome/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/node/node-welcome/src/index.ts",
+          "hash": "7211084654777033548"
+        },
+        {
+          "file": "packages/node/node-welcome/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/graceful-shutdown": [
+        {
+          "file": "packages/node/graceful-shutdown/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/package.json",
+          "hash": "16703054522097663028",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/js-yaml",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/node/graceful-shutdown/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/src/handle-shutdown.ts",
+          "hash": "9123308280000595673"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/src/handlers.ts",
+          "hash": "15746746776508626695"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/src/index.ts",
+          "hash": "6372791963417187515"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/src/on-shutdown.ts",
+          "hash": "10971899934730672044"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/src/shutdown-handler.ts",
+          "hash": "8435161743742440356"
+        },
+        {
+          "file": "packages/node/graceful-shutdown/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/fastify-kit": [
+        {
+          "file": "packages/fastify/fastify-kit/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/fastify/fastify-kit/package.json",
+          "hash": "12829099340358772031",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:@types/uuid",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:fastify",
+            "npm:fastify-type-provider-zod",
+            "npm:uuid"
+          ]
+        },
+        {
+          "file": "packages/fastify/fastify-kit/rollup.config.mjs",
+          "hash": "15393770583532327454"
+        },
+        {
+          "file": "packages/fastify/fastify-kit/src/index.ts",
+          "hash": "9973047763080244914"
+        },
+        {
+          "file": "packages/fastify/fastify-kit/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/fastify-kit-errors-handling": [
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/package.json",
+          "hash": "1486199815711624515",
+          "deps": [
+            "@relab/fastify-kit",
+            "npm:zod",
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:fastify",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/error-handler.ts",
+          "hash": "1253422574273317401"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/authentication-error.ts",
+          "hash": "2377838247014101203"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/authorization-error.ts",
+          "hash": "7271563931800313849"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/generate-application-error-type.ts",
+          "hash": "310944541105897546"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/generate-upstream-resource-error-type.ts",
+          "hash": "18419853451620227287"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/generate-validation-error-type.ts",
+          "hash": "11290185984683410617"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/index.ts",
+          "hash": "11325765108914786080"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/errors/unexpected-server-error.ts",
+          "hash": "15987971409899965142"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/http-errors.ts",
+          "hash": "2451163215664843051"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/index.ts",
+          "hash": "16775959025478236900"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/src/ref.ts",
+          "hash": "15669703350425244650"
+        },
+        {
+          "file": "packages/fastify/fastify-kit-errors-handling/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/node-manifest": [
+        {
+          "file": "packages/node/node-manifest/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/node/node-manifest/package.json",
+          "hash": "9362134669428696006",
+          "deps": [
+            "npm:zod",
+            "@relab/eslint-config",
+            "@relab/fastify-kit",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/node/node-manifest/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/node/node-manifest/src/index.ts",
+          "hash": "3946135361193057326"
+        },
+        {
+          "file": "packages/node/node-manifest/src/schema.ts",
+          "hash": "16336199713208149018"
+        },
+        {
+          "file": "packages/node/node-manifest/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/winston-logger": [
+        {
+          "file": "packages/node/winston-logger/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/node/winston-logger/docs/demo.png",
+          "hash": "7454052608609099498"
+        },
+        {
+          "file": "packages/node/winston-logger/package.json",
+          "hash": "10708387811478505220",
+          "deps": [
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/js-yaml",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:js-yaml@4.1.0",
+            "npm:winston",
+            "npm:winston-telegram",
+            "npm:winston-transport"
+          ]
+        },
+        {
+          "file": "packages/node/winston-logger/rollup.config.mjs",
+          "hash": "7421594325117748249"
+        },
+        {
+          "file": "packages/node/winston-logger/src/configuration.ts",
+          "hash": "10538399684886225472"
+        },
+        {
+          "file": "packages/node/winston-logger/src/index.ts",
+          "hash": "7604616292714527995"
+        },
+        {
+          "file": "packages/node/winston-logger/src/logger.ts",
+          "hash": "10820951162971890575"
+        },
+        {
+          "file": "packages/node/winston-logger/src/pad.ts",
+          "hash": "10215254163095281294"
+        },
+        {
+          "file": "packages/node/winston-logger/src/patch.ts",
+          "hash": "17048054459814181302"
+        },
+        {
+          "file": "packages/node/winston-logger/src/resolve-options.ts",
+          "hash": "12994312711132631498"
+        },
+        {
+          "file": "packages/node/winston-logger/src/types.ts",
+          "hash": "13231943128661691574"
+        },
+        {
+          "file": "packages/node/winston-logger/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/fastify-health-check": [
+        {
+          "file": "packages/fastify/fastify-health-check/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/package.json",
+          "hash": "17984323637629266982",
+          "deps": [
+            "npm:fastify",
+            "@relab/eslint-config",
+            "@relab/prettier-config",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-json",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-copy",
+            "npm:rollup-plugin-delete",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-preserve-directives",
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/rollup.config.mjs",
+          "hash": "8368394798395526390"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/src/components-health-check.ts",
+          "hash": "7549897312939600376"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/src/health-check-error.ts",
+          "hash": "11540730674890509205"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/src/health-check.ts",
+          "hash": "7055225955970825742"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/src/health-checks.ts",
+          "hash": "13501450698509575583"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/src/index.ts",
+          "hash": "14451058613913022069"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/src/promisify.ts",
+          "hash": "2902897299873857853"
+        },
+        {
+          "file": "packages/fastify/fastify-health-check/tsconfig.json",
+          "hash": "2043247808712540527"
+        }
+      ],
+      "@relab/prettier-config": [
+        {
+          "file": "packages/presets/prettier-config/.npmrc",
+          "hash": "12459296429434114265"
+        },
+        {
+          "file": "packages/presets/prettier-config/package.json",
+          "hash": "4697245381756158534",
+          "deps": [
+            "npm:eslint",
+            "npm:@trivago/prettier-plugin-sort-imports",
+            "npm:prettier"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,6 @@
 {
   "name": "@relab/dev-kit",
+  "packageManager": "pnpm@9.1.4",
   "scripts": {
     "build": "nx run-many -t build",
     "graph": "nx graph"

@@ -1,7 +1,7 @@
 # @relab/app-info
 
-## 1.1.3
+## 1.1.4
 
 ### Patch Changes
 
--   Moving to monorepo
+-   Migrating to monorepo

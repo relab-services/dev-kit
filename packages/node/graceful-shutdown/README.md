@@ -1,6 +1,6 @@
-<h1 align="center">🚀 Graceful Shutdown for Node.js</h1>
+# @relab/graceful-shutdown
 
-<p align="center">Tiny and stupid simple dependency-free Node.js library to shutdown gracefully.</p>
+Tiny and stupid simple dependency-free Node.js library to shut down gracefully.
 
 ## Requirements
 

@@ -1,7 +1,7 @@
 # @relab/eslint-config
 
-## 2.2.3
+## 2.2.4
 
 ### Patch Changes
 
-- Moving to monorepo
+- Migrating to monorepo

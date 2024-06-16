@@ -1,7 +1,7 @@
 # @relab/semantic-release-commits-config
 
-## 0.0.0
+## 0.0.1
 
 ### Patch Changes
 
--   Moving to monorepo
+-   Migrating to monorepo

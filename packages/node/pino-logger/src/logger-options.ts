@@ -1,3 +1,4 @@
+import { getCorrelationId } from '@relab/fastify-correlation-id'
 import { LoggerOptions } from 'pino'
 import process from 'process'
 
@@ -22,6 +23,10 @@ export const loggerOptions: LoggerOptions = {
             result['error_name'] = mergeObject.err.name
             result['error_message'] = mergeObject.err.message
             result['error_stack'] = mergeObject.err.stack
+        }
+
+        if (!result['correlation_id']) {
+            result['correlation_id'] = getCorrelationId()
         }
 
         return result

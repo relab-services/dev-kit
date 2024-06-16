@@ -1,4 +1,6 @@
-<h1 align="center">🎯 Health Checks for fastify</h1>
+# @relab/fastify-health-check
+
+Fastify plugin that provides health probes and exposes corresponding endpoints.
 
 ## Requirements
 

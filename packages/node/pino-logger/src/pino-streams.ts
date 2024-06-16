@@ -13,7 +13,7 @@ export const pinoStreams: () => pino.DestinationStream | pino.StreamEntry<string
             stream: pretty({
                 colorize: true,
                 messageFormat: '{if area}\x1b[33m[{area}] {end}\x1b[94m{msg}',
-                ignore: 'hostname,area,pid,error_name,error_message,error_stack,http_method,http_url,http_client_ip,http_response_code',
+                ignore: 'hostname,area,pid,correlation_id,error_name,error_message,error_stack,reqId,http_method,http_url,http_client_ip,http_response_code',
             }),
         },
     ]
@@ -42,6 +42,7 @@ export const pinoStreams: () => pino.DestinationStream | pino.StreamEntry<string
                     propsToLabels: [
                         'area',
                         'msg',
+                        'correlation_id',
 
                         'error_name',
                         'error_message',

@@ -1,7 +1,7 @@
 # @relab/react-modals
 
-## 1.1.6
+## 1.1.7
 
 ### Patch Changes
 
--   Moving to monorepo
+-   Migrating to monorepo

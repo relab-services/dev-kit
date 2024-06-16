@@ -3,19 +3,28 @@
     "default": {
       "runner": "nx/task-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint"]
+        "cacheableOperations": [
+          "build",
+          "lint"
+        ]
       }
     }
   },
   "targetDefaults": {
     "build": {
-      "inputs": ["{projectRoot}/**/*", "!{projectRoot}/**/*.md"],
-      "dependsOn": ["^build"],
+      "inputs": [
+        "{projectRoot}/**/*",
+        "!{projectRoot}/**/*.md"
+      ],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": [
         "{projectRoot}/lib",
         "{projectRoot}/dist"
       ],
       "cache": true
     }
-  }
+  },
+  "nxCloudAccessToken": "ODk4YzdkODAtYzg0ZS00MWJiLWEzZTgtMGVhNTI2NzI2ZWZhfHJlYWQtd3JpdGU="
 }

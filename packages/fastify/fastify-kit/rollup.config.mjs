@@ -7,6 +7,7 @@ import json from '@rollup/plugin-json';
 import del from 'rollup-plugin-delete'
 import { dts } from 'rollup-plugin-dts'
 import external from 'rollup-plugin-peer-deps-external'
+import copy from 'rollup-plugin-copy'
 
 export default [
     {
@@ -30,6 +31,9 @@ export default [
                     directives: false,
                 },
             }),
+            copy({
+                targets: [{ src: 'node_modules/@scalar/api-reference/dist/browser/standalone.js', dest: 'lib', rename: 'api-reference.js' }],
+            })
         ],
     },
     {

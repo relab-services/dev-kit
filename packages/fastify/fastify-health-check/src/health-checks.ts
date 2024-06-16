@@ -3,10 +3,11 @@ import { FastifyPluginCallback } from 'fastify'
 import { HealthCheck } from './health-check'
 import { HealthCheckError } from './health-check-error'
 
-export const HealthChecks: FastifyPluginCallback<{
-    prefix: string
+export type HealthChecksPluginOptions = {
     probes: HealthCheck[]
-}> = (fastify, { prefix, probes }, done) => {
+}
+
+export const HealthChecks: FastifyPluginCallback<HealthChecksPluginOptions> = (fastify, { probes }, done) => {
     for (const { url, check } of probes) {
         fastify.get(url.startsWith('/') ? url : `/${url}`, async (request, response) => {
             try {
@@ -25,3 +26,6 @@ export const HealthChecks: FastifyPluginCallback<{
 
     done()
 }
+
+// @ts-ignore
+HealthChecks[Symbol.for('plugin-meta')] = { name: 'HealthChecks' }

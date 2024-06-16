@@ -1,5 +1,5 @@
 packages:
   - 'packages/node/*'
-  - 'packages/fastify/*'
+  - 'packages/fastify/**'
   - 'packages/react/*'
   - 'packages/presets/*'

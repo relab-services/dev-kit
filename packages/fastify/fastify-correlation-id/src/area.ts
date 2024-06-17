@@ -1,1 +1,1 @@
-export const area = 'fastify-kit-correlationid' as const
+export const area = 'fastify-kit-correlationid'

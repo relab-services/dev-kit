@@ -52,6 +52,8 @@ jobs:
 
       - run: pnpm install
 
+      - run: pnpm lint
+
       - run: pnpm build
 
       - name: Changesets Publish

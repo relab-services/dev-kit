@@ -15,6 +15,7 @@ declare module '@relab/fastify-kit' {
     }
 }
 
+// @ts-expect-error TS2693
 FastifyBootstrapper.prototype.useHealthChecks = function <
     Server extends http.Server,
     Request extends RawRequestDefaultExpression<Server> = RawRequestDefaultExpression<Server>,
@@ -28,6 +29,7 @@ FastifyBootstrapper.prototype.useHealthChecks = function <
         probes: HealthCheck[]
     }
 ) {
+    // @ts-expect-error TS2339
     void this._instance.register(HealthChecks, {
         prefix: options.prefix,
         probes: options.probes,

@@ -3,8 +3,9 @@ import { OpenAPIV3 } from 'openapi-types'
 export const buildSecuritySchema = <T extends string>(
     security: Record<T, OpenAPIV3.SecuritySchemeObject>
 ): {
+    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style, @typescript-eslint/array-type
     authorize: (...schemas: T[]) => ReadonlyArray<{
-        [securityLabel: string]: readonly string[]
+        [securityLabel: string]: readonly string[] // eslint-disable-line @typescript-eslint/consistent-indexed-object-style
     }>
     schema: Record<T, OpenAPIV3.SecuritySchemeObject>
 } => {

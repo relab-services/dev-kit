@@ -19,7 +19,7 @@ export const OpenApi = FastifyPlugin<OpenApiPluginOptions>(
             ...fastify.errorsMap?.buildOpenApiResponses(),
         }
 
-        fastify.register(Swagger, {
+        void fastify.register(Swagger, {
             openapi,
             transform: doc => zodToJsonSchemaTransform([])(doc),
             refResolver: { buildLocalReference: json => (json as { $id: string }).$id },

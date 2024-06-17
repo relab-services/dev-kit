@@ -37,7 +37,7 @@ export const CorrelationId = FastifyPlugin<CorrelationIdPluginOptions>(
                 log.debug('Correlation ID is generated: %s', correlationId)
             }
 
-            if (options.skipResponseHeader !== true) reply.header(headerName, correlationId)
+            if (options.skipResponseHeader !== true) void reply.header(headerName, correlationId)
             req.correlationId = correlationId
 
             storage.run(correlationId, done)

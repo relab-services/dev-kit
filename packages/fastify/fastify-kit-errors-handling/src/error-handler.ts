@@ -16,6 +16,7 @@ declare module '@relab/fastify-kit' {
     }
 }
 
+// @ts-expect-error TS2693
 FastifyBootstrapper.prototype.useErrorHandler = function <
     Server extends http.Server,
     Request extends RawRequestDefaultExpression<Server> = RawRequestDefaultExpression<Server>,
@@ -26,6 +27,7 @@ FastifyBootstrapper.prototype.useErrorHandler = function <
     this: FastifyBootstrapper<Server, Request, Reply, Logger, TypeProvider>,
     handler: <TError extends Error>(error: TError) => undefined | { status: number; payload: unknown } | Promise<{ status: number; payload: unknown }>
 ) {
+    // @ts-expect-error TS2339
     this._instance.setErrorHandler(async (error, request, response) => {
         const result = await handler(error)
         if (result) {

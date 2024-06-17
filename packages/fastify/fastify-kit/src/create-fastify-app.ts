@@ -27,7 +27,7 @@ export const createFastifyApp = (options?: FastifyHttpOptions<http.Server>) => {
         .setSerializerCompiler(serializerCompiler)
         .withTypeProvider<ZodTypeProvider>()
 
-    // @ts-ignore
+    // @ts-expect-error TS2345
     app.decorateRequest<SecurityGuard>('securityGuards', undefined)
     app.addHook('onRequest', async request => {
         request.securityGuards = new SecurityGuard()
@@ -35,7 +35,7 @@ export const createFastifyApp = (options?: FastifyHttpOptions<http.Server>) => {
 
     app.registerRoutes = function (routes: Route[], options?: RegisterOptions) {
         for (const Route of routes) {
-            app.register((fastify, options, done) => {
+            void app.register((fastify, options, done) => {
                 // create a context for every route, so it will have a named logging area
 
                 fastify.addHook('onRequest', (req, reply, done) => {
@@ -47,7 +47,7 @@ export const createFastifyApp = (options?: FastifyHttpOptions<http.Server>) => {
                     done()
                 })
 
-                app.register(Route, options)
+                void app.register(Route, options)
                 done()
             })
         }

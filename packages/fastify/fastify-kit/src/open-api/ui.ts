@@ -36,7 +36,9 @@ export const generateHtml = async (options: { configuration: ReferenceConfigurat
         ? `<!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>${options.configuration?.metaData?.title || 'API Documentation'}</title>
+        <title>${
+            options.configuration?.metaData?.title || 'API Documentation' // eslint-disable-line @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-base-to-string
+        }</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -81,10 +83,10 @@ export const registerUi = <Server extends http.Server>(
         }
         const content = await generateHtml({ configuration })
 
-        if (content) response.header('Content-Type', 'text/html').send(content)
+        if (content) await response.header('Content-Type', 'text/html').send(content)
         else {
             fastify.log.warn({ area }, 'Unable to generate OpenAPI UI (seems something wrong with fastify-kit package)')
-            response.code(404).send()
+            await response.code(404).send()
         }
     })
 }

@@ -34,6 +34,7 @@ export const zodToJsonSchemaTransform: (skipList: readonly string[]) => NonNulla
             const zodSchema = zodSchemas[element]
             if (zodSchema) {
                 const refName = element === 'body' ? zodSchema._def.refName : undefined
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                 const transformedSchema = zodToJsonSchema(zodSchema, zodToJsonSchemaOptions(refName)) as ZodSchemaWithRef
 
                 const componentRef = transformedSchema['$ref']
@@ -51,6 +52,7 @@ export const zodToJsonSchemaTransform: (skipList: readonly string[]) => NonNulla
 
                 if (zodSchema && zodSchema instanceof ZodType) {
                     const refName = zodSchema._def.refName
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                     const transformedSchema = zodToJsonSchema(zodSchema, zodToJsonSchemaOptions(refName)) as ZodSchemaWithRef
 
                     const componentRef = transformedSchema['$ref']

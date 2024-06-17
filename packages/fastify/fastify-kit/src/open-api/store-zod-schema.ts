@@ -1,6 +1,8 @@
 import { ZodType, ZodTypeDef } from 'zod'
 import { ignoreOverride, type Options, parseDef, zodToJsonSchema } from 'zod-to-json-schema'
 
+import '../ref'
+
 const zodToJsonSchemaOptions: Partial<Options<'openApi3'>> = {
     target: 'openApi3',
     $refStrategy: 'none',
@@ -11,6 +13,7 @@ export const storeZodSchema = (schemas: Map<string, unknown>, data: unknown) => 
     if (data && data instanceof ZodType && data._def.refName) {
         const transformedSchema = {
             $id: data._def.refName,
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             ...zodToJsonSchema(data, {
                 ...zodToJsonSchemaOptions,
                 override: (def, refs, seen, forceResolution) => {
@@ -51,6 +54,6 @@ export const storeZodSchema = (schemas: Map<string, unknown>, data: unknown) => 
             }),
         }
 
-        schemas.set(data._def.refName, transformedSchema)
+        schemas.set(data._def.refName, transformedSchema) // eslint-disable-line @typescript-eslint/no-unsafe-argument
     }
 }

@@ -10,7 +10,7 @@ export const HealthStatus = FastifyPlugin<HealthStatusPluginOptions>(
     (fastify, options, done) => {
         fastify.addHook('onListen', async () => await options?.onHealthy?.())
 
-        onShutdown(async () => options.onUnhealthy?.())
+        onShutdown(async () => await options.onUnhealthy?.())
 
         done()
     },

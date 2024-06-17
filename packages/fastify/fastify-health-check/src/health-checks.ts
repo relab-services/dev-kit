@@ -14,12 +14,12 @@ export const HealthChecks: FastifyPluginCallback<HealthChecksPluginOptions> = (f
                 const result = await check()
 
                 response.statusCode = 200
-                response.send(typeof result === 'object' ? JSON.stringify(result, null, 2) : result ?? 'OK')
+                await response.send(typeof result === 'object' ? JSON.stringify(result, null, 2) : result ?? 'OK')
             } catch (error) {
                 response.statusCode = 500
 
-                if (error instanceof HealthCheckError) response.type(error.contentType)
-                if (error instanceof Error) response.send(error.message)
+                if (error instanceof HealthCheckError) void response.type(error.contentType)
+                if (error instanceof Error) await response.send(error.message)
             }
         })
     }
@@ -27,5 +27,5 @@ export const HealthChecks: FastifyPluginCallback<HealthChecksPluginOptions> = (f
     done()
 }
 
-// @ts-ignore
+// @ts-expect-error TS7053
 HealthChecks[Symbol.for('plugin-meta')] = { name: 'HealthChecks' }

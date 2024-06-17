@@ -15,6 +15,7 @@ import {
 
 declare module 'fastify' {
     interface FastifyInstance {
+        // @ts-expect-error TS2717
         errorsMap?: ErrorMapDefinition
     }
 }
@@ -31,6 +32,7 @@ declare module '@relab/fastify-kit' {
     }
 }
 
+// @ts-expect-error TS2693
 FastifyBootstrapper.prototype.useErrorsMap = function <
     Server extends http.Server,
     Request extends RawRequestDefaultExpression<Server> = RawRequestDefaultExpression<Server>,
@@ -38,10 +40,13 @@ FastifyBootstrapper.prototype.useErrorsMap = function <
     Logger extends FastifyBaseLogger = FastifyBaseLogger,
     TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(this: FastifyBootstrapper<Server, Request, Reply, Logger, TypeProvider>, configure?: (errors: ErrorMapDefinition) => void) {
+    // @ts-expect-error TS2339
     this._instance.errorsMap = new ErrorMapDefinition()
-    if (configure) configure(this._instance.errorsMap)
+    // @ts-expect-error TS2339
+    if (configure) configure(this._instance.errorsMap) // eslint-disable-line @typescript-eslint/no-unsafe-argument
 
-    this.useErrorHandler(this._instance.errorsMap.buildErrorHandler())
+    // @ts-expect-error TS2339
+    this.useErrorHandler(this._instance.errorsMap.buildErrorHandler()) // eslint-disable-line @typescript-eslint/no-unsafe-argument
 
     return this
 }
@@ -80,7 +85,7 @@ export class ErrorMapDefinition {
         httpCode: number,
         schema: TErrorOutputSchema,
         handler: (errorInstance: InstanceType<TErrorClass>) => z.infer<TErrorOutputSchema>
-    ): ErrorMapDefinition {
+    ): typeof this {
         const item: ErrorMappingItem<TErrorClass, TErrorOutputSchema> = [errorClass, httpCode, schema, handler] as const
         this.errors.push(item)
         return this

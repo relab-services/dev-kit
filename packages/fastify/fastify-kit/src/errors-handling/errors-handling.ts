@@ -11,7 +11,7 @@ declare module 'fastify' {
 
 export type ErrorsHandlingPluginOptions = {
     http: (configure: ErrorMapDefinition) => void
-    ignoreLogging: Function[]
+    ignoreLogging: Function[] // eslint-disable-line @typescript-eslint/ban-types
 }
 
 export const ErrorsHandling = FastifyPlugin<ErrorsHandlingPluginOptions>(
@@ -23,8 +23,8 @@ export const ErrorsHandling = FastifyPlugin<ErrorsHandlingPluginOptions>(
         if (fastify.errorsMap) {
             const handler = fastify.errorsMap.buildErrorHandler()
             fastify.setErrorHandler(handler)
-            fastify.setNotFoundHandler(
-                async (req, reply) => await handler(new NotFoundError({ resource: req.url, message: `Requested URL not found: ${req.url}` }), req, reply)
+            fastify.setNotFoundHandler(async (req, reply) =>
+                handler(new NotFoundError({ resource: req.url, message: `Requested URL not found: ${req.url}` }), req, reply)
             )
         }
 

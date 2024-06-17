@@ -13,7 +13,7 @@ export const manifest = <ManifestSchema extends ZodType>(
 
     const packageContent = fs.readFileSync(packagePath, { encoding: 'utf8' })
     const manifestContent = fs.readFileSync(manifestPath, { encoding: 'utf8' })
-    let manifest: z.infer<ManifestSchema> | undefined = undefined
+    let manifest: z.infer<ManifestSchema> | undefined
 
     return () => manifest ?? (manifest = schema.parse({ ...JSON.parse(manifestContent), package: JSON.parse(packageContent) }))
 }

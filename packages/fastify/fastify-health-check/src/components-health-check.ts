@@ -6,15 +6,16 @@ export class ComponentsHealthCheck<T extends string> implements HealthCheck {
     private readonly _url: string
     private readonly _components: Record<T, boolean>
 
-    constructor(url: string, components: ReadonlyArray<T>) {
+    constructor(url: string, components: readonly T[]) {
         this._url = url
-        this._components = components.reduce<Record<T, boolean>>((result, current) => ({ ...result, [current]: false }), {} as Record<T, boolean>)
+        this._components = components.reduce<Record<T, boolean>>((result, current) => ({ ...result, [current]: false }), {} as Record<T, boolean>) // eslint-disable-line @typescript-eslint/prefer-reduce-type-parameter, @typescript-eslint/consistent-type-assertions
     }
 
     public get url(): string {
         return this._url
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
     public get check(): () => Promisify<Record<string, unknown> | string | void> {
         return () => {
             const unhealthy = Object.values(this._components).some(healthy => !healthy)
@@ -23,7 +24,7 @@ export class ComponentsHealthCheck<T extends string> implements HealthCheck {
                     ...result,
                     [current[0]]: current[1] ? 'Healthy' : 'Unhealthy',
                 }),
-                {} as Record<T[number], 'Healthy' | 'Unhealthy'>
+                {} as Record<T[number], 'Healthy' | 'Unhealthy'> // eslint-disable-line @typescript-eslint/prefer-reduce-type-parameter, @typescript-eslint/consistent-type-assertions
             )
 
             if (unhealthy) throw new HealthCheckError(result)

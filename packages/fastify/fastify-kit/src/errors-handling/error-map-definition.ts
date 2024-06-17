@@ -1,6 +1,5 @@
 import { FastifyReply } from 'fastify/types/reply'
 import { FastifyRequest } from 'fastify/types/request'
-import { ContextConfigDefault } from 'fastify/types/utils'
 import { z, ZodSchema, ZodType } from 'zod'
 
 import {
@@ -17,9 +16,10 @@ import { ErrorMappingItem, ErrorsMap, HttpCode } from './errors-map'
 
 export class ErrorMapDefinition {
     private readonly errors: ErrorsMap = []
-    private readonly ignoreLogging: Function[]
+    private readonly ignoreLogging: Function[] // eslint-disable-line @typescript-eslint/ban-types
     private defaultHandler?: (error: unknown) => unknown
 
+    // eslint-disable-next-line  @typescript-eslint/ban-types
     constructor(ignoreLogging: Function[]) {
         this.ignoreLogging = ignoreLogging
 
@@ -42,7 +42,7 @@ export class ErrorMapDefinition {
         httpCode: HttpCode,
         schema: TErrorOutputSchema,
         handler: (errorInstance: InstanceType<TErrorClass>) => z.infer<TErrorOutputSchema>
-    ): ErrorMapDefinition {
+    ): typeof this {
         const item: ErrorMappingItem<TErrorClass, TErrorOutputSchema> = [errorClass, httpCode, schema, handler] as const
         this.errors.push(item)
         return this
@@ -109,11 +109,11 @@ export class ErrorMapDefinition {
                 const handler = foundErrorMap['3']
                 const payload = handler(error)
 
-                reply.status(foundErrorMap['1']).send(payload)
+                void reply.status(foundErrorMap['1']).send(payload)
             } else if (defaultHandler) {
-                reply.status(500).send(defaultHandler(error))
+                void reply.status(500).send(defaultHandler(error))
             } else {
-                reply.status(500).send({})
+                void reply.status(500).send({})
             }
         }
     }

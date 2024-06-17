@@ -1,6 +1,6 @@
 {
   "name": "@relab/fastify-kit-errors-handling",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -71,7 +71,7 @@
     "zod": "3.23.8"
   },
   "peerDependencies": {
-    "@relab/fastify-kit": ">=1.0.1",
+    "@relab/fastify-kit": ">=1.0.3",
     "zod": ">= 3"
   }
 }

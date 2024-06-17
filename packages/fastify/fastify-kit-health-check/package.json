@@ -1,6 +1,6 @@
 {
   "name": "@relab/fastify-kit-health-check",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -70,7 +70,7 @@
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@relab/fastify-kit": ">=1.0.1"
+    "@relab/fastify-kit": ">=1.0.3"
   },
   "dependencies": {
     "@relab/fastify-health-check": "workspace:*"

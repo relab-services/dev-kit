@@ -1,5 +1,11 @@
 # @relab/prettier-config
 
+## 1.1.8
+
+### Patch Changes
+
+- 4e6218b: Fixed key for `.nx` folder (previously used `.pnpm-store` which is wrong)
+
 ## 1.1.7
 
 ### Patch Changes

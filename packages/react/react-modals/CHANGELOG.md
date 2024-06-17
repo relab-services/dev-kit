@@ -1,5 +1,11 @@
 # @relab/react-modals
 
+## 1.1.11
+
+### Patch Changes
+
+-   4e6218b: Fixed key for `.nx` folder (previously used `.pnpm-store` which is wrong)
+
 ## 1.1.10
 
 ### Patch Changes

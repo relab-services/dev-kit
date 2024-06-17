@@ -1,1 +1,0 @@
-{"version":3,"file":"getRequestFromOperation.d.ts","sourceRoot":"","sources":["../src/getRequestFromOperation.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAEV,kBAAkB,EAGlB,oBAAoB,EACrB,MAAM,SAAS,CAAA;AAEhB,eAAO,MAAM,uBAAuB,cACvB,oBAAoB,YACrB;IACR,gBAAgB,CAAC,EAAE,OAAO,CAAA;IAC1B,YAAY,CAAC,EAAE,OAAO,CAAA;CACvB,uBACoB,MAAM,GAAG,MAAM,KACnC,QAAQ,kBAAkB,CAsC5B,CAAA"}

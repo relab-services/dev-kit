@@ -1,8 +1,0 @@
-import type { DeepReadonly } from 'vue';
-import type { ReferenceLayoutType } from '../../types';
-import type BaseLayout from './BaseLayout.vue';
-declare const layouts: DeepReadonly<{
-    [x in ReferenceLayoutType]: typeof BaseLayout;
-}>;
-export default layouts;
-//# sourceMappingURL=index.d.ts.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"getParametersFromOperation.d.ts","sourceRoot":"","sources":["../src/getParametersFromOperation.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,aAAa,EAAE,oBAAoB,EAAE,MAAM,SAAS,CAAA;AAElE;;;;;;;GAOG;AACH,wBAAgB,0BAA0B,CACxC,SAAS,EAAE,oBAAoB,EAC/B,KAAK,EAAE,OAAO,GAAG,QAAQ,GAAG,MAAM,GAAG,QAAQ,GAAG,UAAU,GAAG,MAAM,EACnE,YAAY,GAAE,OAAc,GAC3B,aAAa,EAAE,CAkCjB"}

@@ -1,4 +1,0 @@
-import type { OpenAPIV2, OpenAPIV3, OpenAPIV3_1 } from '@scalar/openapi-parser';
-import type { Spec } from '../types';
-export declare function getModels(spec?: Spec): OpenAPIV2.DefinitionsObject | Record<string, OpenAPIV3_1.SchemaObject> | Record<string, OpenAPIV3.SchemaObject>;
-//# sourceMappingURL=getModels.d.ts.map

@@ -1,6 +1,0 @@
-import type { HarRequestWithPath, TransformedOperation } from './types';
-export declare const getRequestFromOperation: (operation: TransformedOperation, options?: {
-    replaceVariables?: boolean;
-    requiredOnly?: boolean;
-}, selectedExampleKey?: string | number) => Partial<HarRequestWithPath>;
-//# sourceMappingURL=getRequestFromOperation.d.ts.map

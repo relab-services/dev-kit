@@ -134,6 +134,5 @@ dist
 .DS_Store
 .idea
 lib
-.nx/cache
-.nx/workspace-data/d
-.nx/workspace-data/file-map.json
+.pnpm-store
+.nx

@@ -66,8 +66,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Version info
+      - name: Published
         if: steps.changesets.outputs.published == 'true'
         shell: bash
         run: |
           echo "Version published"
+
+      - name: Has changesets
+        if: steps.changesets.outputs.hasChangesets == 'true'
+        shell: bash
+        run: |
+          echo "Version published"
+
+      - name: Show release info
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            console.log(steps.changesets.outputs);

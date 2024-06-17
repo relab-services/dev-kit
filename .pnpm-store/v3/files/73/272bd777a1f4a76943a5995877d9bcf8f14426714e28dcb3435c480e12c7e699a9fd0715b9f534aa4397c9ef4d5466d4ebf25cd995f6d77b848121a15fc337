@@ -1,5 +1,0 @@
-import { L as LokiOptions } from './shared/pino-loki.c7434040.cjs';
-
-declare const createPinoLokiConfigFromArgs: () => LokiOptions;
-
-export { createPinoLokiConfigFromArgs };

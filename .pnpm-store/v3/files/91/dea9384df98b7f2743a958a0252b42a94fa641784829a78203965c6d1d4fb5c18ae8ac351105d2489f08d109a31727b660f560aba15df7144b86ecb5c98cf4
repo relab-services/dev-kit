@@ -1,2 +1,0 @@
-export declare const clickGeneratedParameter: import("@vueuse/core").UseEventBusReturn<unknown, any>;
-//# sourceMappingURL=clientBus.d.ts.map

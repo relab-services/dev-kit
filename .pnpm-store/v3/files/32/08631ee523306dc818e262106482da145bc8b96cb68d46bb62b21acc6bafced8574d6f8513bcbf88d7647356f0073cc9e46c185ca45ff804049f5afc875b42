@@ -1,0 +1,787 @@
+import { ComponentOptionsMixin } from 'vue';
+import { DefineComponent } from 'vue';
+import { ExtractPropTypes } from 'vue';
+import type { Middleware } from '@floating-ui/vue';
+import { MiddlewareData } from '@floating-ui/vue';
+import type { Placement } from '@floating-ui/vue';
+import { PropType } from 'vue';
+import { PublicProps } from 'vue';
+import type { VariantProps } from 'cva';
+
+declare type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_10<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_11<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_12<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_13<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_14<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_15<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_2<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_3<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_4<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_5<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_6<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_7<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_8<T> = T extends undefined ? never : T;
+
+declare type __VLS_NonUndefinedable_9<T> = T extends undefined ? never : T;
+
+declare type __VLS_Prettify<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_Prettify_2<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_Prettify_3<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_Prettify_4<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_Prettify_5<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_Prettify_6<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_TypePropsToRuntimeProps<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_10<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_10<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_11<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_11<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_12<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_12<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_13<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_13<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_14<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_14<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_15<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_15<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_2<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_2<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_3<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_3<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_4<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_4<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_5<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_5<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_6<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_6<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_7<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_7<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_8<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_8<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_TypePropsToRuntimeProps_9<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_9<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
+declare type __VLS_WithDefaults<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithDefaults_2<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_2<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithDefaults_3<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_3<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithDefaults_4<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_4<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithDefaults_5<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_5<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithDefaults_6<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_6<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_10<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_11<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_2<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_3<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_4<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_5<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_6<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_7<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_8<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_9<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type FloatingOptions = {
+    /**
+     * Where to place the floating element relative to its reference element.
+     * @default 'bottom'
+     * */
+    placement?: Placement;
+    /**
+     * Whether or not track the reference element's width
+     * If enabled it will set `width` slot prop of the floating slot
+     */
+    resize?: boolean;
+    /**
+     * Floating UI Middleware to be passed to Floating UI
+     * @see https://floating-ui.com/docs/computePosition#middleware
+     */
+    middleware?: Middleware[];
+};
+
+export declare type Icon = (typeof ICONS)[number];
+
+declare const iconProps: (props?: ({
+    size?: "sm" | "md" | "xs" | "lg" | "xl" | "2xl" | "3xl" | "full" | undefined;
+} & ({
+    class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined;
+    className?: undefined;
+} | {
+    class?: undefined;
+    className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined;
+})) | undefined) => string;
+
+declare const ICONS: readonly ["Add", "ArrowLeft", "ArrowRight", "Background", "Brackets", "Branch", "CallToAction", "Checkmark", "ChevronDown", "ChevronLeft", "ChevronRight", "ChevronUp", "Clipboard", "Close", "CodeFolder", "Cookie", "DarkMode", "Delete", "Discord", "DocsPage", "Duplicate", "Edit", "Ellipses", "Error", "ExternalLink", "FilterList", "Folder", "GitHub", "Hide", "History", "JsonObject", "Key", "Leave", "LightDarkModeToggle", "LightMode", "Link", "Lock", "Logo", "LogoAPI", "LogoClient", "LogoMarket", "LogoSwagger", "Magic", "Menu", "Page", "PaperAirplane", "Payment", "Play", "Refresh", "Response", "Search", "Show", "SideBarClosed", "SideBarOpen", "Sort", "Terminal", "ThumbsDown", "ThumbsUp", "Trash", "Unlock", "Upload", "User", "programming-framework-angular", "programming-framework-astro", "programming-framework-laravel", "programming-framework-nextdotjs", "programming-framework-react", "programming-framework-vuedotjs", "programming-language-c", "programming-language-clojure", "programming-language-csharp", "programming-language-css3", "programming-language-go", "programming-language-html5", "programming-language-http", "programming-language-java", "programming-language-javascript", "programming-language-json", "programming-language-kotlin", "programming-language-node", "programming-language-objc", "programming-language-ocaml", "programming-language-php", "programming-language-powershell", "programming-language-python", "programming-language-r", "programming-language-ruby", "programming-language-scala", "programming-language-shell", "programming-language-swift", "programming-language-typescript", "programming-script-code", "programming-tool-git", "programming-tool-tailwindcss"];
+
+declare type IconVariants = VariantProps<typeof iconProps>;
+
+declare type LoadingState = ReturnType<typeof useLoadingState>;
+
+declare type Option_2 = {
+    id: string;
+    label: string;
+    disabled?: boolean;
+    [x: string]: any;
+};
+
+export declare const ScalarButton: __VLS_WithTemplateSlots<DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
+    disabled?: boolean | undefined;
+    fullWidth?: boolean | undefined;
+    loading?: {
+        isValid: boolean;
+        isInvalid: boolean;
+        isLoading: boolean;
+        startLoading: () => void;
+        stopLoading: () => void;
+        validate: (time?: number) => Promise<unknown>;
+        invalidate: (time?: number) => Promise<unknown>;
+        clear: (time?: number) => Promise<unknown>;
+    } | undefined;
+    size?: "sm" | "md" | undefined;
+    variant?: string | undefined;
+    type?: "button" | "submit" | "reset" | undefined;
+}>, {
+    fullWidth: boolean;
+    size: string;
+    variant: string;
+    type: string;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
+    disabled?: boolean | undefined;
+    fullWidth?: boolean | undefined;
+    loading?: {
+        isValid: boolean;
+        isInvalid: boolean;
+        isLoading: boolean;
+        startLoading: () => void;
+        stopLoading: () => void;
+        validate: (time?: number) => Promise<unknown>;
+        invalidate: (time?: number) => Promise<unknown>;
+        clear: (time?: number) => Promise<unknown>;
+    } | undefined;
+    size?: "sm" | "md" | undefined;
+    variant?: string | undefined;
+    type?: "button" | "submit" | "reset" | undefined;
+}>, {
+    fullWidth: boolean;
+    size: string;
+    variant: string;
+    type: string;
+}>>>, {
+    size: "sm" | "md";
+    type: "button" | "submit" | "reset";
+    variant: string;
+    fullWidth: boolean;
+}, {}>, {
+    icon?(_: {}): any;
+    default?(_: {}): any;
+}>;
+
+export declare const ScalarCodeBlock: DefineComponent<__VLS_WithDefaults_2<__VLS_TypePropsToRuntimeProps_2<{
+    content: string | object;
+    lang?: string | undefined;
+    lineNumbers?: boolean | undefined;
+    hideCredentials?: string | string[] | undefined;
+}>, {
+    lang: string;
+    lineNumbers: boolean;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_WithDefaults_2<__VLS_TypePropsToRuntimeProps_2<{
+    content: string | object;
+    lang?: string | undefined;
+    lineNumbers?: boolean | undefined;
+    hideCredentials?: string | string[] | undefined;
+}>, {
+    lang: string;
+    lineNumbers: boolean;
+}>>>, {
+    lang: string;
+    lineNumbers: boolean;
+}, {}>;
+
+export declare const ScalarDropdown: __VLS_WithTemplateSlots_2<DefineComponent<__VLS_TypePropsToRuntimeProps_3<Omit<FloatingOptions, "middleware">>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_3<Omit<FloatingOptions, "middleware">>>>, {}, {}>, {
+    default?(_: {}): any;
+    items?(_: {}): any;
+}>;
+
+export declare const ScalarDropdownDivider: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<{}>>, {}, {}>;
+
+export declare const ScalarDropdownItem: __VLS_WithTemplateSlots_3<DefineComponent<__VLS_TypePropsToRuntimeProps_4<{
+    disabled?: boolean | undefined;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    click: (event: MouseEvent) => void;
+}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_4<{
+    disabled?: boolean | undefined;
+}>>> & {
+    onClick?: ((event: MouseEvent) => any) | undefined;
+}, {}, {}>, {
+    default?(_: {}): any;
+}>;
+
+export declare const ScalarFloating: __VLS_WithTemplateSlots_4<DefineComponent<__VLS_TypePropsToRuntimeProps_5<FloatingOptions>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_5<FloatingOptions>>>, {}, {}>, Readonly<{
+    /** The reference element for the element in the #floating slot */
+    default(): any;
+    /** The floating element */
+    floating(props: {
+        /** The width of the reference element if `resize` is true and placement is on the y axis */
+        width?: string | undefined;
+        /** The height of the reference element if `resize` is true and placement is on the x axis */
+        height?: string | undefined;
+        /** The middleware data return by Floating UI */
+        data?: MiddlewareData | undefined;
+    }): any;
+}> & {
+    /** The reference element for the element in the #floating slot */
+    default(): any;
+    /** The floating element */
+    floating(props: {
+        /** The width of the reference element if `resize` is true and placement is on the y axis */
+        width?: string | undefined;
+        /** The height of the reference element if `resize` is true and placement is on the x axis */
+        height?: string | undefined;
+        /** The middleware data return by Floating UI */
+        data?: MiddlewareData | undefined;
+    }): any;
+}>;
+
+export declare const ScalarIcon: DefineComponent<__VLS_TypePropsToRuntimeProps_6<{
+    icon: Icon;
+    size?: IconVariants['size'];
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_6<{
+    icon: Icon;
+    size?: IconVariants['size'];
+}>>>, {}, {}>;
+
+export declare const ScalarIconButton: DefineComponent<__VLS_WithDefaults_3<__VLS_TypePropsToRuntimeProps_7<{
+    label: string;
+    icon: Icon;
+    disabled?: boolean | undefined;
+    variant?: Variants['variant'];
+    size?: Variants['size'];
+}>, {
+    variant: string;
+    size: string;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_WithDefaults_3<__VLS_TypePropsToRuntimeProps_7<{
+    label: string;
+    icon: Icon;
+    disabled?: boolean | undefined;
+    variant?: Variants['variant'];
+    size?: Variants['size'];
+}>, {
+    variant: string;
+    size: string;
+}>>>, {
+    size: "sm" | "md" | "xs" | "full" | "xxs";
+    variant: string;
+}, {}>;
+
+export declare const ScalarListbox: __VLS_WithTemplateSlots_5<DefineComponent<__VLS_TypePropsToRuntimeProps_8<{
+    options: Option_2[];
+    modelValue?: Option_2 | undefined;
+} & Omit<FloatingOptions, "middleware">>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (v: Option_2) => void;
+}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_8<{
+    options: Option_2[];
+    modelValue?: Option_2 | undefined;
+} & Omit<FloatingOptions, "middleware">>>> & {
+    "onUpdate:modelValue"?: ((v: Option_2) => any) | undefined;
+}, {}, {}>, {
+    default?(_: {}): any;
+}>;
+
+export declare const ScalarLoading: DefineComponent<__VLS_WithDefaults_4<__VLS_TypePropsToRuntimeProps_9<{
+    loadingState: LoadingState;
+    size?: string | undefined;
+}>, {
+    size: string;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_WithDefaults_4<__VLS_TypePropsToRuntimeProps_9<{
+    loadingState: LoadingState;
+    size?: string | undefined;
+}>, {
+    size: string;
+}>>>, {
+    size: string;
+}, {}>;
+
+export declare const ScalarModal: __VLS_WithTemplateSlots_6<DefineComponent<__VLS_WithDefaults_5<__VLS_TypePropsToRuntimeProps_10<{
+    state: ReturnType<typeof useModal>;
+    title?: string | undefined;
+    bodyClass?: string | undefined;
+    maxWidth?: string | undefined;
+    size?: "sm" | "md" | "xs" | "lg" | undefined;
+    variant?: "search" | "history" | undefined;
+}>, {
+    size: string;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_WithDefaults_5<__VLS_TypePropsToRuntimeProps_10<{
+    state: ReturnType<typeof useModal>;
+    title?: string | undefined;
+    bodyClass?: string | undefined;
+    maxWidth?: string | undefined;
+    size?: "sm" | "md" | "xs" | "lg" | undefined;
+    variant?: "search" | "history" | undefined;
+}>, {
+    size: string;
+}>>>, {
+    size: "sm" | "md" | "xs" | "lg";
+}, {}>, {
+    default?(_: {}): any;
+}>;
+
+export declare const ScalarPopover: __VLS_WithTemplateSlots_7<DefineComponent<__VLS_TypePropsToRuntimeProps_11<Omit<FloatingOptions, "middleware">>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_11<Omit<FloatingOptions, "middleware">>>>, {}, {}>, {
+    default?(_: {}): any;
+    popover?(_: {}): any;
+}>;
+
+export declare const ScalarSearchInput: __VLS_WithTemplateSlots_8<DefineComponent<__VLS_TypePropsToRuntimeProps_12<{
+    loading?: {
+        isValid: boolean;
+        isInvalid: boolean;
+        isLoading: boolean;
+        startLoading: () => void;
+        stopLoading: () => void;
+        validate: (time?: number) => Promise<unknown>;
+        invalidate: (time?: number) => Promise<unknown>;
+        clear: (time?: number) => Promise<unknown>;
+    } | undefined;
+    modelValue?: string | undefined;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (v: string) => void;
+}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_12<{
+    loading?: {
+        isValid: boolean;
+        isInvalid: boolean;
+        isLoading: boolean;
+        startLoading: () => void;
+        stopLoading: () => void;
+        validate: (time?: number) => Promise<unknown>;
+        invalidate: (time?: number) => Promise<unknown>;
+        clear: (time?: number) => Promise<unknown>;
+    } | undefined;
+    modelValue?: string | undefined;
+}>>> & {
+    "onUpdate:modelValue"?: ((v: string) => any) | undefined;
+}, {}, {}>, {
+    label?(_: {}): any;
+}>;
+
+export declare const ScalarSearchResultItem: __VLS_WithTemplateSlots_9<DefineComponent<__VLS_TypePropsToRuntimeProps_13<{
+    icon?: "Menu" | "Add" | "ArrowLeft" | "ArrowRight" | "Background" | "Brackets" | "Branch" | "CallToAction" | "Checkmark" | "ChevronDown" | "ChevronLeft" | "ChevronRight" | "ChevronUp" | "Clipboard" | "Close" | "CodeFolder" | "Cookie" | "DarkMode" | "Delete" | "Discord" | "DocsPage" | "Duplicate" | "Edit" | "Ellipses" | "Error" | "ExternalLink" | "FilterList" | "Folder" | "GitHub" | "Hide" | "History" | "JsonObject" | "Key" | "Leave" | "LightDarkModeToggle" | "LightMode" | "Link" | "Lock" | "Logo" | "LogoAPI" | "LogoClient" | "LogoMarket" | "LogoSwagger" | "Magic" | "Page" | "PaperAirplane" | "Payment" | "Play" | "Refresh" | "Response" | "Search" | "Show" | "SideBarClosed" | "SideBarOpen" | "Sort" | "Terminal" | "ThumbsDown" | "ThumbsUp" | "Trash" | "Unlock" | "Upload" | "User" | "programming-framework-angular" | "programming-framework-astro" | "programming-framework-laravel" | "programming-framework-nextdotjs" | "programming-framework-react" | "programming-framework-vuedotjs" | "programming-language-c" | "programming-language-clojure" | "programming-language-csharp" | "programming-language-css3" | "programming-language-go" | "programming-language-html5" | "programming-language-http" | "programming-language-java" | "programming-language-javascript" | "programming-language-json" | "programming-language-kotlin" | "programming-language-node" | "programming-language-objc" | "programming-language-ocaml" | "programming-language-php" | "programming-language-powershell" | "programming-language-python" | "programming-language-r" | "programming-language-ruby" | "programming-language-scala" | "programming-language-shell" | "programming-language-swift" | "programming-language-typescript" | "programming-script-code" | "programming-tool-git" | "programming-tool-tailwindcss" | undefined;
+    active?: boolean | undefined;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_13<{
+    icon?: "Menu" | "Add" | "ArrowLeft" | "ArrowRight" | "Background" | "Brackets" | "Branch" | "CallToAction" | "Checkmark" | "ChevronDown" | "ChevronLeft" | "ChevronRight" | "ChevronUp" | "Clipboard" | "Close" | "CodeFolder" | "Cookie" | "DarkMode" | "Delete" | "Discord" | "DocsPage" | "Duplicate" | "Edit" | "Ellipses" | "Error" | "ExternalLink" | "FilterList" | "Folder" | "GitHub" | "Hide" | "History" | "JsonObject" | "Key" | "Leave" | "LightDarkModeToggle" | "LightMode" | "Link" | "Lock" | "Logo" | "LogoAPI" | "LogoClient" | "LogoMarket" | "LogoSwagger" | "Magic" | "Page" | "PaperAirplane" | "Payment" | "Play" | "Refresh" | "Response" | "Search" | "Show" | "SideBarClosed" | "SideBarOpen" | "Sort" | "Terminal" | "ThumbsDown" | "ThumbsUp" | "Trash" | "Unlock" | "Upload" | "User" | "programming-framework-angular" | "programming-framework-astro" | "programming-framework-laravel" | "programming-framework-nextdotjs" | "programming-framework-react" | "programming-framework-vuedotjs" | "programming-language-c" | "programming-language-clojure" | "programming-language-csharp" | "programming-language-css3" | "programming-language-go" | "programming-language-html5" | "programming-language-http" | "programming-language-java" | "programming-language-javascript" | "programming-language-json" | "programming-language-kotlin" | "programming-language-node" | "programming-language-objc" | "programming-language-ocaml" | "programming-language-php" | "programming-language-powershell" | "programming-language-python" | "programming-language-r" | "programming-language-ruby" | "programming-language-scala" | "programming-language-shell" | "programming-language-swift" | "programming-language-typescript" | "programming-script-code" | "programming-tool-git" | "programming-tool-tailwindcss" | undefined;
+    active?: boolean | undefined;
+}>>>, {}, {}>, {
+    icon?(_: {}): any;
+    default?(_: {}): any;
+    addon?(_: {}): any;
+    description?(_: {}): any;
+}>;
+
+export declare const ScalarSearchResultList: __VLS_WithTemplateSlots_10<DefineComponent<__VLS_TypePropsToRuntimeProps_14<{
+    noResults?: boolean | undefined;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps_14<{
+    noResults?: boolean | undefined;
+}>>>, {}, {}>, {
+    noResults?(_: {}): any;
+    default?(_: {}): any;
+}>;
+
+export declare const ScalarTextField: __VLS_WithTemplateSlots_11<DefineComponent<__VLS_WithDefaults_6<__VLS_TypePropsToRuntimeProps_15<{
+    modelValue: string;
+    placeholder?: string | undefined;
+    label?: string | undefined;
+    /** This color creates a mask over the input outline and should be set to the background color behind the textField */
+    labelShadowColor?: string | undefined;
+    error?: boolean | undefined;
+    isMultiline?: boolean | undefined;
+    helperText?: string | undefined;
+    emitOnBlur?: boolean | undefined;
+    handleFieldSubmit?: ((e: string) => void) | undefined;
+    handleFieldChange?: ((e: string) => void) | undefined;
+    /** Option to disable trimming for input fields */
+    disableTrim?: boolean | undefined;
+}>, {
+    emitOnBlur: boolean;
+    labelShadowColor: string;
+    disableTrim: boolean;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    submit: (v: string) => void;
+    "update:modelValue": (v: string) => void;
+}, string, PublicProps, Readonly<ExtractPropTypes<__VLS_WithDefaults_6<__VLS_TypePropsToRuntimeProps_15<{
+    modelValue: string;
+    placeholder?: string | undefined;
+    label?: string | undefined;
+    /** This color creates a mask over the input outline and should be set to the background color behind the textField */
+    labelShadowColor?: string | undefined;
+    error?: boolean | undefined;
+    isMultiline?: boolean | undefined;
+    helperText?: string | undefined;
+    emitOnBlur?: boolean | undefined;
+    handleFieldSubmit?: ((e: string) => void) | undefined;
+    handleFieldChange?: ((e: string) => void) | undefined;
+    /** Option to disable trimming for input fields */
+    disableTrim?: boolean | undefined;
+}>, {
+    emitOnBlur: boolean;
+    labelShadowColor: string;
+    disableTrim: boolean;
+}>>> & {
+    onSubmit?: ((v: string) => any) | undefined;
+    "onUpdate:modelValue"?: ((v: string) => any) | undefined;
+}, {
+    labelShadowColor: string;
+    emitOnBlur: boolean;
+    disableTrim: boolean;
+}, {}>, {
+    default?(_: {}): any;
+}>;
+
+/**
+ * Handles isLoading spinner for the FlowLoader Component
+ * - stateIsLoading will trigger the spinner
+ * - isValid or isInvalid will show a check or x and then spin out
+ */
+export declare function useLoadingState(): {
+    isValid: boolean;
+    isInvalid: boolean;
+    isLoading: boolean;
+    startLoading: () => void;
+    stopLoading: () => void;
+    validate: (time?: number) => Promise<unknown>;
+    invalidate: (time?: number) => Promise<unknown>;
+    clear: (time?: number) => Promise<unknown>;
+};
+
+export declare const useModal: () => {
+    open: boolean;
+    show: () => void;
+    hide: () => void;
+};
+
+declare type Variants = VariantProps<typeof variants>;
+
+declare const variants: (props?: ({
+    size?: "sm" | "md" | "xs" | "full" | "xxs" | undefined;
+    disabled?: boolean | undefined;
+    variant?: string | undefined;
+} & ({
+    class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined;
+    className?: undefined;
+} | {
+    class?: undefined;
+    className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined)[] | {
+        [x: string]: any;
+    } | null | undefined;
+})) | undefined) => string;
+
+export { }

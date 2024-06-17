@@ -1,0 +1,21 @@
+import { openBlock, createElementBlock, createElementVNode } from "vue";
+const n = {
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "none",
+  viewBox: "0 0 12 12"
+}, r = /* @__PURE__ */ createElementVNode("path", {
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  d: "M7.9 9.8 4.1 6l3.8-3.8"
+}, null, -1), c = [
+  r
+];
+function l(s, d) {
+  return openBlock(), createElementBlock("svg", n, [...c]);
+}
+const _ = { render: l };
+export {
+  _ as default,
+  l as render
+};

@@ -1,0 +1,21 @@
+import { openBlock as e, createElementBlock as o, createElementVNode as l } from "vue";
+const t = {
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "none",
+  viewBox: "0 0 14 14"
+}, n = /* @__PURE__ */ l("path", {
+  fill: "currentColor",
+  "fill-rule": "evenodd",
+  d: "M1.625.258A.75.75 0 0 0 1.44.75v9.62a1.71 1.71 0 0 0 .942 1.523l.002.001 3.845 1.923.337-.67-.335.67H6.23a1.71 1.71 0 0 0 2.48-1.524v-.214h2.136a1.71 1.71 0 0 0 1.712-1.711V1.712A1.71 1.71 0 0 0 10.847 0H2.191a.75.75 0 0 0-.566.258M8.712 10.58h2.135a.21.21 0 0 0 .212-.211V1.712a.21.21 0 0 0-.212-.212H5.373l2.395 1.195.002.001a1.71 1.71 0 0 1 .942 1.538v.003l-.75-.005h.75z",
+  "clip-rule": "evenodd"
+}, null, -1), r = [
+  n
+];
+function a(c, d) {
+  return e(), o("svg", t, [...r]);
+}
+const i = { render: a };
+export {
+  i as default,
+  a as render
+};

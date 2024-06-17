@@ -1,0 +1,16 @@
+import { openBlock as e, createElementBlock as t, createElementVNode as o } from "vue";
+const r = {
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "currentColor",
+  viewBox: "0 0 15 15"
+}, n = /* @__PURE__ */ o("path", { d: "M0 12h10v-.7H0zm0-9v.7h15V3zm0 4.8h15v-.6H0z" }, null, -1), c = [
+  n
+];
+function l(s, h) {
+  return e(), t("svg", r, [...c]);
+}
+const _ = { render: l };
+export {
+  _ as default,
+  l as render
+};

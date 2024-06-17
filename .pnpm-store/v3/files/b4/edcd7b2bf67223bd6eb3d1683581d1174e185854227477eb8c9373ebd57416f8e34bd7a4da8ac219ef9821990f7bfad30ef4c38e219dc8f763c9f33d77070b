@@ -1,0 +1,1313 @@
+import { defineComponent as _, useCssVars as Z, openBlock as u, createElementBlock as b, normalizeClass as y, unref as o, createElementVNode as f, createCommentVNode as N, createStaticVNode as Q, reactive as F, computed as k, useAttrs as z, mergeProps as C, renderSlot as S, createVNode as x, ref as A, watch as U, nextTick as ee, onServerPrefetch as te, useSSRContext as ae, onMounted as j, toDisplayString as T, toValue as D, Fragment as W, createBlock as $, withCtx as v, defineAsyncComponent as re, resolveDynamicComponent as X, renderList as se, normalizeStyle as q, createTextVNode as K, normalizeProps as oe, guardReactiveProps as ne, withKeys as ie } from "vue";
+import { defineConfig as le } from "cva";
+import { extendTailwindMerge as de } from "tailwind-merge";
+import { createHash as ce, ssrState as pe } from "@scalar/oas-utils";
+import R from "prismjs";
+import { Menu as ue, MenuItems as me, MenuButton as ge, MenuItem as fe, Listbox as he, ListboxOptions as ve, ListboxOption as be, ListboxButton as Se, Dialog as ye, DialogPanel as _e, DialogTitle as ke, DialogDescription as we, Popover as Ee, PopoverPanel as xe, PopoverButton as $e } from "@headlessui/vue";
+import { getSideAxis as M } from "@floating-ui/utils";
+import { useFloating as Ne, autoUpdate as Ae, offset as Ce, flip as Ie, shift as Le } from "@floating-ui/vue";
+import { useTextareaAutosize as Te } from "@vueuse/core";
+import { nanoid as ze } from "nanoid";
+const Re = de({
+  extend: {
+    classGroups: {
+      "font-size": ["text-xxs"]
+    }
+  }
+}), { cva: L, cx: w, compose: At } = le({
+  hooks: {
+    onComplete: (r) => Re(r)
+  }
+}), De = /* @__PURE__ */ Q('<path class="svg-path svg-check-mark" d="m 0 60 l 30 30 l 70 -80" data-v-47faceda></path><path class="svg-path svg-x-mark" d="m 50 50 l 40 -40" data-v-47faceda></path><path class="svg-path svg-x-mark" d="m 50 50 l 40 40" data-v-47faceda></path><path class="svg-path svg-x-mark" d="m 50 50 l -40 -40" data-v-47faceda></path><path class="svg-path svg-x-mark" d="m 50 50 l -40 40" data-v-47faceda></path>', 5), Oe = {
+  key: 0,
+  class: "circular-loader"
+};
+function Ct() {
+  return F({
+    isValid: !1,
+    isInvalid: !1,
+    isLoading: !1,
+    startLoading() {
+      this.isLoading = !0;
+    },
+    stopLoading() {
+      this.isLoading = !1;
+    },
+    validate(r = 800) {
+      this.isValid = !0;
+      const t = r - 300;
+      return new Promise(
+        (e) => setTimeout(() => this.clear().then(() => e(!0)), t)
+      );
+    },
+    invalidate(r = 1100) {
+      this.isInvalid = !0;
+      const t = r - 300;
+      return new Promise(
+        (e) => setTimeout(() => this.clear().then(() => e(!0)), t)
+      );
+    },
+    clear(r = 300) {
+      return this.isValid = !1, this.isInvalid = !1, this.isLoading = !1, new Promise((t) => {
+        setTimeout(() => {
+          t(!0);
+        }, r);
+      });
+    }
+  });
+}
+const Pe = /* @__PURE__ */ _({
+  __name: "ScalarLoading",
+  props: {
+    loadingState: {},
+    size: { default: "24px" }
+  },
+  setup(r) {
+    return Z((t) => ({
+      d6cae758: t.size
+    })), (t, e) => t.loadingState ? (u(), b("div", {
+      key: 0,
+      class: y(o(w)("loader-wrapper"))
+    }, [
+      (u(), b("svg", {
+        class: y(["svg-loader", {
+          "icon-is-valid": t.loadingState.isValid,
+          "icon-is-invalid": t.loadingState.isInvalid
+        }]),
+        viewBox: "0 0 100 100",
+        xmlns: "http://www.w3.org/2000/svg",
+        "xmlns:xlink": "http://www.w3.org/1999/xlink"
+      }, [
+        De,
+        t.loadingState.isLoading ? (u(), b("g", Oe, [
+          f("circle", {
+            class: y(["loader-path", {
+              "loader-path-off": t.loadingState.isValid || t.loadingState.isInvalid
+            }]),
+            cx: "50",
+            cy: "50",
+            fill: "none",
+            r: "20",
+            "stroke-width": "2"
+          }, null, 2)
+        ])) : N("", !0)
+      ], 2))
+    ], 2)) : N("", !0);
+  }
+}), P = (r, t) => {
+  const e = r.__vccOpts || r;
+  for (const [a, d] of t)
+    e[a] = d;
+  return e;
+}, Y = /* @__PURE__ */ P(Pe, [["__scopeId", "data-v-47faceda"]]), J = {
+  solid: [
+    "scalar-button-solid",
+    "bg-back-btn-1 text-fore-btn-1 shadow-sm active:bg-back-btn-1 active:shadow-none hocus:bg-hover-btn-1"
+  ],
+  outlined: [
+    "scalar-button-outlined",
+    "active:bg-btn-1 border border-solid border-border bg-transparent text-fore-1 hocus:bg-border"
+  ],
+  ghost: [
+    "scalar-button-ghost",
+    "bg-transparent text-fore-3 transition-colors active:text-fore-1 hocus:text-fore-1"
+  ],
+  danger: [
+    "scalar-button-danger",
+    "bg-error text-white active:brightness-90 hocus:brightness-90"
+  ]
+}, Be = L({
+  base: "scalar-button row cursor-pointer items-center justify-center rounded font-medium",
+  variants: {
+    disabled: {
+      true: "bg-background-2 text-color-3 cursor-not-allowed shadow-none"
+    },
+    fullWidth: { true: "w-full" },
+    size: { sm: "px-2 py-1 text-xs", md: "h-10 px-6 text-sm" },
+    variant: J
+  },
+  compoundVariants: [
+    {
+      disabled: !0,
+      variant: "ghost",
+      class: "bg-transparent text-ghost"
+    }
+  ]
+}), He = ["ariaDisabled", "type"], Me = {
+  key: 0,
+  class: "mr-2 h-4 w-4"
+}, Ve = {
+  key: 1,
+  class: "ml-2"
+}, It = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarButton",
+  props: {
+    disabled: { type: Boolean },
+    fullWidth: { type: Boolean, default: !1 },
+    loading: {},
+    size: { default: "md" },
+    variant: { default: "solid" },
+    type: { default: "button" }
+  },
+  setup(r) {
+    const t = k(() => {
+      const { class: e, ...a } = z();
+      return { class: e || "", rest: a };
+    });
+    return (e, a) => (u(), b("button", C(t.value.rest, {
+      ariaDisabled: e.disabled || void 0,
+      class: o(w)(
+        o(Be)({ fullWidth: e.fullWidth, disabled: e.disabled, size: e.size, variant: e.variant }),
+        { "pl-9 pr-3": e.loading },
+        `${t.value.class}`
+      ),
+      type: e.type
+    }), [
+      e.$slots.icon ? (u(), b("div", Me, [
+        S(e.$slots, "icon")
+      ])) : N("", !0),
+      S(e.$slots, "default"),
+      e.loading ? (u(), b("div", Ve, [
+        x(o(Y), {
+          loadingState: e.loading,
+          size: "20px"
+        }, null, 8, ["loadingState"])
+      ])) : N("", !0)
+    ], 16, He));
+  }
+});
+(function(r) {
+  var t = "\\b(?:BASH|BASHOPTS|BASH_ALIASES|BASH_ARGC|BASH_ARGV|BASH_CMDS|BASH_COMPLETION_COMPAT_DIR|BASH_LINENO|BASH_REMATCH|BASH_SOURCE|BASH_VERSINFO|BASH_VERSION|COLORTERM|COLUMNS|COMP_WORDBREAKS|DBUS_SESSION_BUS_ADDRESS|DEFAULTS_PATH|DESKTOP_SESSION|DIRSTACK|DISPLAY|EUID|GDMSESSION|GDM_LANG|GNOME_KEYRING_CONTROL|GNOME_KEYRING_PID|GPG_AGENT_INFO|GROUPS|HISTCONTROL|HISTFILE|HISTFILESIZE|HISTSIZE|HOME|HOSTNAME|HOSTTYPE|IFS|INSTANCE|JOB|LANG|LANGUAGE|LC_ADDRESS|LC_ALL|LC_IDENTIFICATION|LC_MEASUREMENT|LC_MONETARY|LC_NAME|LC_NUMERIC|LC_PAPER|LC_TELEPHONE|LC_TIME|LESSCLOSE|LESSOPEN|LINES|LOGNAME|LS_COLORS|MACHTYPE|MAILCHECK|MANDATORY_PATH|NO_AT_BRIDGE|OLDPWD|OPTERR|OPTIND|ORBIT_SOCKETDIR|OSTYPE|PAPERSIZE|PATH|PIPESTATUS|PPID|PS1|PS2|PS3|PS4|PWD|RANDOM|REPLY|SECONDS|SELINUX_INIT|SESSION|SESSIONTYPE|SESSION_MANAGER|SHELL|SHELLOPTS|SHLVL|SSH_AUTH_SOCK|TERM|UID|UPSTART_EVENTS|UPSTART_INSTANCE|UPSTART_JOB|UPSTART_SESSION|USER|WINDOWID|XAUTHORITY|XDG_CONFIG_DIRS|XDG_CURRENT_DESKTOP|XDG_DATA_DIRS|XDG_GREETER_DATA_DIR|XDG_MENU_PREFIX|XDG_RUNTIME_DIR|XDG_SEAT|XDG_SEAT_PATH|XDG_SESSION_DESKTOP|XDG_SESSION_ID|XDG_SESSION_PATH|XDG_SESSION_TYPE|XDG_VTNR|XMODIFIERS)\\b", e = {
+    pattern: /(^(["']?)\w+\2)[ \t]+\S.*/,
+    lookbehind: !0,
+    alias: "punctuation",
+    // this looks reasonably well in all themes
+    inside: null
+    // see below
+  }, a = {
+    bash: e,
+    environment: {
+      pattern: RegExp("\\$" + t),
+      alias: "constant"
+    },
+    variable: [
+      // [0]: Arithmetic Environment
+      {
+        pattern: /\$?\(\([\s\S]+?\)\)/,
+        greedy: !0,
+        inside: {
+          // If there is a $ sign at the beginning highlight $(( and )) as variable
+          variable: [
+            {
+              pattern: /(^\$\(\([\s\S]+)\)\)/,
+              lookbehind: !0
+            },
+            /^\$\(\(/
+          ],
+          number: /\b0x[\dA-Fa-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:[Ee]-?\d+)?/,
+          // Operators according to https://www.gnu.org/software/bash/manual/bashref.html#Shell-Arithmetic
+          operator: /--|\+\+|\*\*=?|<<=?|>>=?|&&|\|\||[=!+\-*/%<>^&|]=?|[?~:]/,
+          // If there is no $ sign at the beginning highlight (( and )) as punctuation
+          punctuation: /\(\(?|\)\)?|,|;/
+        }
+      },
+      // [1]: Command Substitution
+      {
+        pattern: /\$\((?:\([^)]+\)|[^()])+\)|`[^`]+`/,
+        greedy: !0,
+        inside: {
+          variable: /^\$\(|^`|\)$|`$/
+        }
+      },
+      // [2]: Brace expansion
+      {
+        pattern: /\$\{[^}]+\}/,
+        greedy: !0,
+        inside: {
+          operator: /:[-=?+]?|[!\/]|##?|%%?|\^\^?|,,?/,
+          punctuation: /[\[\]]/,
+          environment: {
+            pattern: RegExp("(\\{)" + t),
+            lookbehind: !0,
+            alias: "constant"
+          }
+        }
+      },
+      /\$(?:\w+|[#?*!@$])/
+    ],
+    // Escape sequences from echo and printf's manuals, and escaped quotes.
+    entity: /\\(?:[abceEfnrtv\\"]|O?[0-7]{1,3}|U[0-9a-fA-F]{8}|u[0-9a-fA-F]{4}|x[0-9a-fA-F]{1,2})/
+  };
+  r.languages.bash = {
+    shebang: {
+      pattern: /^#!\s*\/.*/,
+      alias: "important"
+    },
+    comment: {
+      pattern: /(^|[^"{\\$])#.*/,
+      lookbehind: !0
+    },
+    "function-name": [
+      // a) function foo {
+      // b) foo() {
+      // c) function foo() {
+      // but not “foo {”
+      {
+        // a) and c)
+        pattern: /(\bfunction\s+)[\w-]+(?=(?:\s*\(?:\s*\))?\s*\{)/,
+        lookbehind: !0,
+        alias: "function"
+      },
+      {
+        // b)
+        pattern: /\b[\w-]+(?=\s*\(\s*\)\s*\{)/,
+        alias: "function"
+      }
+    ],
+    // Highlight variable names as variables in for and select beginnings.
+    "for-or-select": {
+      pattern: /(\b(?:for|select)\s+)\w+(?=\s+in\s)/,
+      alias: "variable",
+      lookbehind: !0
+    },
+    // Highlight variable names as variables in the left-hand part
+    // of assignments (“=” and “+=”).
+    "assign-left": {
+      pattern: /(^|[\s;|&]|[<>]\()\w+(?:\.\w+)*(?=\+?=)/,
+      inside: {
+        environment: {
+          pattern: RegExp("(^|[\\s;|&]|[<>]\\()" + t),
+          lookbehind: !0,
+          alias: "constant"
+        }
+      },
+      alias: "variable",
+      lookbehind: !0
+    },
+    // Highlight parameter names as variables
+    parameter: {
+      pattern: /(^|\s)-{1,2}(?:\w+:[+-]?)?\w+(?:\.\w+)*(?=[=\s]|$)/,
+      alias: "variable",
+      lookbehind: !0
+    },
+    string: [
+      // Support for Here-documents https://en.wikipedia.org/wiki/Here_document
+      {
+        pattern: /((?:^|[^<])<<-?\s*)(\w+)\s[\s\S]*?(?:\r?\n|\r)\2/,
+        lookbehind: !0,
+        greedy: !0,
+        inside: a
+      },
+      // Here-document with quotes around the tag
+      // → No expansion (so no “inside”).
+      {
+        pattern: /((?:^|[^<])<<-?\s*)(["'])(\w+)\2\s[\s\S]*?(?:\r?\n|\r)\3/,
+        lookbehind: !0,
+        greedy: !0,
+        inside: {
+          bash: e
+        }
+      },
+      // “Normal” string
+      {
+        // https://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html
+        pattern: /(^|[^\\](?:\\\\)*)"(?:\\[\s\S]|\$\([^)]+\)|\$(?!\()|`[^`]+`|[^"\\`$])*"/,
+        lookbehind: !0,
+        greedy: !0,
+        inside: a
+      },
+      {
+        // https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html
+        pattern: /(^|[^$\\])'[^']*'/,
+        lookbehind: !0,
+        greedy: !0
+      },
+      {
+        // https://www.gnu.org/software/bash/manual/html_node/ANSI_002dC-Quoting.html
+        pattern: /\$'(?:[^'\\]|\\[\s\S])*'/,
+        greedy: !0,
+        inside: {
+          entity: a.entity
+        }
+      }
+    ],
+    environment: {
+      pattern: RegExp("\\$?" + t),
+      alias: "constant"
+    },
+    variable: a.variable,
+    function: {
+      pattern: /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|apt-cache|apt-get|aptitude|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cargo|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|composer|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|docker|docker-compose|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|java|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|node|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|podman|podman-compose|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|sysctl|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vcpkg|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
+      lookbehind: !0
+    },
+    keyword: {
+      pattern: /(^|[\s;|&]|[<>]\()(?:case|do|done|elif|else|esac|fi|for|function|if|in|select|then|until|while)(?=$|[)\s;|&])/,
+      lookbehind: !0
+    },
+    // https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html
+    builtin: {
+      pattern: /(^|[\s;|&]|[<>]\()(?:\.|:|alias|bind|break|builtin|caller|cd|command|continue|declare|echo|enable|eval|exec|exit|export|getopts|hash|help|let|local|logout|mapfile|printf|pwd|read|readarray|readonly|return|set|shift|shopt|source|test|times|trap|type|typeset|ulimit|umask|unalias|unset)(?=$|[)\s;|&])/,
+      lookbehind: !0,
+      // Alias added to make those easier to distinguish from strings.
+      alias: "class-name"
+    },
+    boolean: {
+      pattern: /(^|[\s;|&]|[<>]\()(?:false|true)(?=$|[)\s;|&])/,
+      lookbehind: !0
+    },
+    "file-descriptor": {
+      pattern: /\B&\d\b/,
+      alias: "important"
+    },
+    operator: {
+      // Lots of redirections here, but not just that.
+      pattern: /\d?<>|>\||\+=|=[=~]?|!=?|<<[<-]?|[&\d]?>>|\d[<>]&?|[<>][&=]?|&[>&]?|\|[&|]?/,
+      inside: {
+        "file-descriptor": {
+          pattern: /^\d/,
+          alias: "important"
+        }
+      }
+    },
+    punctuation: /\$?\(\(?|\)\)?|\.\.|[{}[\];\\]/,
+    number: {
+      pattern: /(^|\s)(?:[1-9]\d*|0)(?:[.,]\d+)?\b/,
+      lookbehind: !0
+    }
+  }, e.inside = r.languages.bash;
+  for (var d = [
+    "comment",
+    "function-name",
+    "for-or-select",
+    "assign-left",
+    "parameter",
+    "string",
+    "environment",
+    "function",
+    "keyword",
+    "builtin",
+    "boolean",
+    "file-descriptor",
+    "operator",
+    "punctuation",
+    "number"
+  ], c = a.variable[1].inside, s = 0; s < d.length; s++)
+    c[d[s]] = r.languages.bash[d[s]];
+  r.languages.sh = r.languages.bash, r.languages.shell = r.languages.bash;
+})(Prism);
+Prism.languages.json = {
+  property: {
+    pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
+    lookbehind: !0,
+    greedy: !0
+  },
+  string: {
+    pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+    lookbehind: !0,
+    greedy: !0
+  },
+  comment: {
+    pattern: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
+    greedy: !0
+  },
+  number: /-?\b\d+(?:\.\d+)?(?:e[+-]?\d+)?\b/i,
+  punctuation: /[{}[\],]/,
+  operator: /:/,
+  boolean: /\b(?:false|true)\b/,
+  null: {
+    pattern: /\bnull\b/,
+    alias: "keyword"
+  }
+};
+Prism.languages.webmanifest = Prism.languages.json;
+(function() {
+  if (typeof Prism > "u" || typeof document > "u")
+    return;
+  var r = "line-numbers", t = /\n(?!$)/g, e = Prism.plugins.lineNumbers = {
+    /**
+     * Get node for provided line number
+     *
+     * @param {Element} element pre element
+     * @param {number} number line number
+     * @returns {Element|undefined}
+     */
+    getLine: function(s, p) {
+      if (!(s.tagName !== "PRE" || !s.classList.contains(r))) {
+        var i = s.querySelector(".line-numbers-rows");
+        if (i) {
+          var g = parseInt(s.getAttribute("data-start"), 10) || 1, m = g + (i.children.length - 1);
+          p < g && (p = g), p > m && (p = m);
+          var n = p - g;
+          return i.children[n];
+        }
+      }
+    },
+    /**
+     * Resizes the line numbers of the given element.
+     *
+     * This function will not add line numbers. It will only resize existing ones.
+     *
+     * @param {HTMLElement} element A `<pre>` element with line numbers.
+     * @returns {void}
+     */
+    resize: function(s) {
+      a([s]);
+    },
+    /**
+     * Whether the plugin can assume that the units font sizes and margins are not depended on the size of
+     * the current viewport.
+     *
+     * Setting this to `true` will allow the plugin to do certain optimizations for better performance.
+     *
+     * Set this to `false` if you use any of the following CSS units: `vh`, `vw`, `vmin`, `vmax`.
+     *
+     * @type {boolean}
+     */
+    assumeViewportIndependence: !0
+  };
+  function a(s) {
+    if (s = s.filter(function(i) {
+      var g = d(i), m = g["white-space"];
+      return m === "pre-wrap" || m === "pre-line";
+    }), s.length != 0) {
+      var p = s.map(function(i) {
+        var g = i.querySelector("code"), m = i.querySelector(".line-numbers-rows");
+        if (!(!g || !m)) {
+          var n = i.querySelector(".line-numbers-sizer"), h = g.textContent.split(t);
+          n || (n = document.createElement("span"), n.className = "line-numbers-sizer", g.appendChild(n)), n.innerHTML = "0", n.style.display = "block";
+          var l = n.getBoundingClientRect().height;
+          return n.innerHTML = "", {
+            element: i,
+            lines: h,
+            lineHeights: [],
+            oneLinerHeight: l,
+            sizer: n
+          };
+        }
+      }).filter(Boolean);
+      p.forEach(function(i) {
+        var g = i.sizer, m = i.lines, n = i.lineHeights, h = i.oneLinerHeight;
+        n[m.length - 1] = void 0, m.forEach(function(l, E) {
+          if (l && l.length > 1) {
+            var I = g.appendChild(document.createElement("span"));
+            I.style.display = "block", I.textContent = l;
+          } else
+            n[E] = h;
+        });
+      }), p.forEach(function(i) {
+        for (var g = i.sizer, m = i.lineHeights, n = 0, h = 0; h < m.length; h++)
+          m[h] === void 0 && (m[h] = g.children[n++].getBoundingClientRect().height);
+      }), p.forEach(function(i) {
+        var g = i.sizer, m = i.element.querySelector(".line-numbers-rows");
+        g.style.display = "none", g.innerHTML = "", i.lineHeights.forEach(function(n, h) {
+          m.children[h].style.height = n + "px";
+        });
+      });
+    }
+  }
+  function d(s) {
+    return s ? window.getComputedStyle ? getComputedStyle(s) : s.currentStyle || null : null;
+  }
+  var c = void 0;
+  window.addEventListener("resize", function() {
+    e.assumeViewportIndependence && c === window.innerWidth || (c = window.innerWidth, a(Array.prototype.slice.call(document.querySelectorAll("pre." + r))));
+  }), Prism.hooks.add("complete", function(s) {
+    if (s.code) {
+      var p = (
+        /** @type {Element} */
+        s.element
+      ), i = (
+        /** @type {HTMLElement} */
+        p.parentNode
+      );
+      if (!(!i || !/pre/i.test(i.nodeName)) && !p.querySelector(".line-numbers-rows") && Prism.util.isActive(p, r)) {
+        p.classList.remove(r), i.classList.add(r);
+        var g = s.code.match(t), m = g ? g.length + 1 : 1, n, h = new Array(m + 1).join("<span></span>");
+        n = document.createElement("span"), n.setAttribute("aria-hidden", "true"), n.className = "line-numbers-rows", n.innerHTML = h, i.hasAttribute("data-start") && (i.style.counterReset = "linenumber " + (parseInt(i.getAttribute("data-start"), 10) - 1)), s.element.appendChild(n), a([i]), Prism.hooks.run("line-numbers", s);
+      }
+    }
+  }), Prism.hooks.add("line-numbers", function(s) {
+    s.plugins = s.plugins || {}, s.plugins.lineNumbers = !0;
+  });
+})();
+function Ge(r) {
+  const t = /* @__PURE__ */ new Set();
+  return JSON.stringify(
+    r,
+    (e, a) => {
+      if (typeof a == "object" && a !== null) {
+        if (t.has(a))
+          return "[Circular]";
+        t.add(a);
+      }
+      return a;
+    },
+    2
+  );
+}
+function O(r) {
+  if (typeof r == "string")
+    return r;
+  if (typeof r == "object")
+    try {
+      return JSON.stringify(r, null, 2);
+    } catch {
+      return Ge(r);
+    }
+  return r;
+}
+const Fe = ["innerHTML"], Lt = /* @__PURE__ */ _({
+  __name: "ScalarCodeBlock",
+  props: {
+    content: {},
+    lang: { default: "js" },
+    lineNumbers: { type: Boolean, default: !1 },
+    hideCredentials: {}
+  },
+  setup(r) {
+    const t = r, e = ce(O(t.content)), a = `components-scalar-code-block${e}`, { plugins: d, highlightElement: c } = R;
+    t.hideCredentials && R.hooks.add("wrap", function(n) {
+      if (!t.hideCredentials)
+        return;
+      let h = !1;
+      typeof t.hideCredentials == "string" ? n.content.includes(t.hideCredentials) && (h = !0) : Array.isArray(t.hideCredentials) && (h = t.hideCredentials.some(
+        (l) => n.content.includes(l)
+      )), h && (n.content = n.content.replace(
+        /<span class="credentials">.*?<\/span>/g,
+        (l) => l.replace(/<span class="credentials">|<\/span>/g, "")
+      ), n.content = n.content.replace(
+        new RegExp(
+          typeof t.hideCredentials == "string" ? t.hideCredentials : t.hideCredentials.join("|"),
+          "g"
+        ),
+        (l) => `<span class="credentials">${l}</span>`
+      ));
+    });
+    const s = A(null), p = A(pe[a] ?? ""), i = k(() => t.lang === "node" ? "js" : t.lang), g = t.lang;
+    U(
+      [() => t.lang, () => t.content, s],
+      () => {
+        s.value && t.content && (!p.value || t.lang !== g) && (p.value = "", ee(() => c(s.value)));
+      },
+      { immediate: !0 }
+    );
+    const m = /\n(?!$)/g;
+    return te(async () => {
+      let n = "";
+      t.lineNumbers && R.hooks.add("after-tokenize", (l) => {
+        const E = l.code.match(m), I = E ? E.length + 1 : 1;
+        n = `<span aria-hidden="true" class="line-numbers-rows">${new Array(I + 1).join("<span></span>")}</span>`;
+      });
+      const h = R.highlight(
+        O(t.content),
+        R.languages[i.value],
+        i.value
+      );
+      if (p.value = h + n, e !== 0) {
+        const l = ae();
+        l.payload.data[a] = h + n;
+      }
+    }), j(async () => {
+      await import("./prism-autoloader-Dlh8Vzlw.js"), d.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/";
+    }), (n, h) => (u(), b("pre", {
+      class: y([
+        `scalar-component scalar-codeblock-pre language-${i.value}`,
+        {
+          "line-numbers": n.lineNumbers
+        }
+      ])
+    }, [
+      p.value ? (u(), b("code", {
+        key: 0,
+        class: y(`scalar-codeblock-code language-${i.value}`),
+        innerHTML: o(O)(p.value)
+      }, null, 10, Fe)) : (u(), b("code", {
+        key: 1,
+        ref_key: "el",
+        ref: s,
+        class: y(`scalar-codeblock-code language-${i.value}`)
+      }, T(o(O)(n.content)), 3))
+    ], 2));
+  }
+});
+function Ue(r, t = { enabled: A(!0) }) {
+  const e = A(0), a = A(0), d = A();
+  return typeof ResizeObserver < "u" && (d.value = new ResizeObserver(([c]) => {
+    var s, p;
+    c && (e.value = ((s = c.borderBoxSize[0]) == null ? void 0 : s.inlineSize) ?? 0, a.value = ((p = c.borderBoxSize[0]) == null ? void 0 : p.blockSize) ?? 0);
+  })), U(
+    [() => D(t.enabled), () => D(r)],
+    ([c, s]) => {
+      !s || !d.value || (c ? d.value.observe(s) : d.value.disconnect());
+    },
+    { immediate: !0 }
+  ), {
+    width: k(
+      () => D(t.enabled) ? `${e.value}px` : void 0
+    ),
+    height: k(
+      () => D(t.enabled) ? `${a.value}px` : void 0
+    )
+  };
+}
+const B = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarFloating",
+  props: {
+    placement: {},
+    resize: { type: Boolean },
+    middleware: {}
+  },
+  setup(r) {
+    const t = r, e = A(null), a = A(null), d = k(
+      () => {
+        var m, n;
+        return (((n = (m = a.value) == null ? void 0 : m.children) == null ? void 0 : n[0]) || a.value) ?? void 0;
+      }
+    ), c = Ue(d, {
+      enabled: k(() => t.resize)
+    }), s = k(
+      () => M(t.placement || "bottom") === "y" ? c.width.value : void 0
+    ), p = k(
+      () => M(t.placement || "bottom") === "x" ? c.height.value : void 0
+    ), { floatingStyles: i, middlewareData: g } = Ne(d, e, {
+      placement: k(() => t.placement),
+      whileElementsMounted: Ae,
+      middleware: k(() => [
+        Ce(5),
+        Ie(),
+        Le(),
+        ...t.middleware ?? []
+      ])
+    });
+    return (m, n) => (u(), b(W, null, [
+      f("div", {
+        ref_key: "wrapperRef",
+        ref: a,
+        class: y({ contents: !!m.$slots.default })
+      }, [
+        S(m.$slots, "default")
+      ], 2),
+      f("div", C({
+        ref_key: "floatingRef",
+        ref: e,
+        class: "relative z-context",
+        style: o(i)
+      }, m.$attrs), [
+        S(m.$slots, "floating", {
+          data: o(g),
+          height: p.value,
+          width: s.value
+        })
+      ], 16)
+    ], 64));
+  }
+}), je = /* @__PURE__ */ f("div", { class: "absolute inset-0 -z-1 rounded bg-back-1 shadow-md brightness-lifted" }, null, -1), Tt = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarDropdown",
+  props: {
+    placement: {},
+    resize: { type: Boolean }
+  },
+  setup(r) {
+    return (t, e) => (u(), $(o(ue), null, {
+      default: v(() => [
+        x(o(B), {
+          placement: t.placement ?? "bottom-start",
+          resize: t.resize
+        }, {
+          floating: v(({ width: a }) => [
+            x(o(me), C({
+              class: "relative flex w-56 flex-col p-0.75",
+              style: { width: a }
+            }, t.$attrs), {
+              default: v(() => [
+                S(t.$slots, "items"),
+                je
+              ]),
+              _: 2
+            }, 1040, ["style"])
+          ]),
+          default: v(() => [
+            x(o(ge), { as: "template" }, {
+              default: v(() => [
+                S(t.$slots, "default")
+              ]),
+              _: 3
+            })
+          ]),
+          _: 3
+        }, 8, ["placement", "resize"])
+      ]),
+      _: 3
+    }));
+  }
+}), We = {}, Xe = { class: "-mx-0.75 my-0.75 h-px bg-border" };
+function qe(r, t) {
+  return u(), b("div", Xe);
+}
+const zt = /* @__PURE__ */ P(We, [["render", qe]]), Rt = /* @__PURE__ */ _({
+  __name: "ScalarDropdownItem",
+  props: {
+    disabled: { type: Boolean }
+  },
+  emits: ["click"],
+  setup(r) {
+    const t = L({
+      base: [
+        // Layout
+        "min-w-0 items-center gap-3 rounded px-2.5 py-1.5 text-left",
+        "first-of-type:mt-0.75 last-of-type:mb-0.75",
+        // Text / background style
+        "truncate bg-transparent text-xs font-medium text-fore-2",
+        // Interaction
+        "cursor-pointer hover:bg-back-2 hover:text-fore-1"
+      ],
+      variants: {
+        disabled: { true: "pointer-events-none text-fore-3" },
+        active: { true: "bg-back-2 text-fore-1" }
+      }
+    });
+    return (e, a) => (u(), $(o(fe), { disabled: e.disabled }, {
+      default: v(({ active: d }) => [
+        f("button", {
+          class: y(["item", o(w)("scalar-dropdown-item", o(t)({ active: d, disabled: e.disabled }))]),
+          type: "button",
+          onClick: a[0] || (a[0] = (c) => e.$emit("click", c))
+        }, [
+          S(e.$slots, "default")
+        ], 2)
+      ]),
+      _: 3
+    }, 8, ["disabled"]));
+  }
+}), V = /* @__PURE__ */ Object.assign({ "./Add.svg": () => import("./Add-yNxGpRcH.js"), "./ArrowLeft.svg": () => import("./ArrowLeft-D7tW1xQo.js"), "./ArrowRight.svg": () => import("./ArrowRight-DmO-sdb2.js"), "./Background.svg": () => import("./Background-CU9VIbfN.js"), "./Brackets.svg": () => import("./Brackets-CI207-BL.js"), "./Branch.svg": () => import("./Branch-CXwj8YuG.js"), "./CallToAction.svg": () => import("./CallToAction-XLYRSI1h.js"), "./Checkmark.svg": () => import("./Checkmark-DhbrPM0P.js"), "./ChevronDown.svg": () => import("./ChevronDown-Co7EAKAv.js"), "./ChevronLeft.svg": () => import("./ChevronLeft-DYt0idAu.js"), "./ChevronRight.svg": () => import("./ChevronRight-ylxToVWl.js"), "./ChevronUp.svg": () => import("./ChevronUp-xAnukIfj.js"), "./Clipboard.svg": () => import("./Clipboard-CU_KxGEv.js"), "./Close.svg": () => import("./Close-xHiYwS8Q.js"), "./CodeFolder.svg": () => import("./CodeFolder-Cv_igzJE.js"), "./Cookie.svg": () => import("./Cookie-CEHvXpqB.js"), "./DarkMode.svg": () => import("./DarkMode-BMR457PH.js"), "./Delete.svg": () => import("./Delete-BCZmxrDD.js"), "./Discord.svg": () => import("./Discord-BHYOFBB2.js"), "./DocsPage.svg": () => import("./DocsPage-Dwx7ZMU9.js"), "./Duplicate.svg": () => import("./Duplicate-DRWEv4R_.js"), "./Edit.svg": () => import("./Edit-Br04RNYb.js"), "./Ellipses.svg": () => import("./Ellipses-Bo_X36Hx.js"), "./Error.svg": () => import("./Error-C5LiISnw.js"), "./ExternalLink.svg": () => import("./ExternalLink-DK8L-EH7.js"), "./FilterList.svg": () => import("./FilterList-CS8Il7NE.js"), "./Folder.svg": () => import("./Folder-CTvnVSEo.js"), "./GitHub.svg": () => import("./GitHub-NdE6Zs9k.js"), "./Hide.svg": () => import("./Hide-BgcCtErz.js"), "./History.svg": () => import("./History-D9nmhNIn.js"), "./JsonObject.svg": () => import("./JsonObject-hGdHUQ4M.js"), "./Key.svg": () => import("./Key-CWXJqX28.js"), "./Leave.svg": () => import("./Leave-K1J3uwoG.js"), "./LightDarkModeToggle.svg": () => import("./LightDarkModeToggle-De3vO47x.js"), "./LightMode.svg": () => import("./LightMode-BeoMphBY.js"), "./Link.svg": () => import("./Link-Bzuc__Nc.js"), "./Lock.svg": () => import("./Lock-xhiH1mKz.js"), "./Logo.svg": () => import("./Logo-DwEDtgj-.js"), "./LogoAPI.svg": () => import("./LogoAPI-CohCfL3L.js"), "./LogoClient.svg": () => import("./LogoClient-Bq5O2QL2.js"), "./LogoMarket.svg": () => import("./LogoMarket-DwlApcab.js"), "./LogoSwagger.svg": () => import("./LogoSwagger-CH60H5qW.js"), "./Magic.svg": () => import("./Magic-Dsi9_bEc.js"), "./Menu.svg": () => import("./Menu-CFK5cOsm.js"), "./Page.svg": () => import("./Page-DA7CO5gc.js"), "./PaperAirplane.svg": () => import("./PaperAirplane-BC-4mGEB.js"), "./Payment.svg": () => import("./Payment-hzcXP1Xb.js"), "./Play.svg": () => import("./Play-Cd4-o7Ji.js"), "./Refresh.svg": () => import("./Refresh-BHRzzQ8P.js"), "./Response.svg": () => import("./Response-DsTlT4S-.js"), "./Search.svg": () => import("./Search-DqtlswRG.js"), "./Show.svg": () => import("./Show-CbiiMLUa.js"), "./SideBarClosed.svg": () => import("./SideBarClosed-K53-CtXh.js"), "./SideBarOpen.svg": () => import("./SideBarOpen-C7UgT82P.js"), "./Sort.svg": () => import("./Sort-CaVMT7jM.js"), "./Terminal.svg": () => import("./Terminal-DJ7x2McL.js"), "./ThumbsDown.svg": () => import("./ThumbsDown-BMgnsASL.js"), "./ThumbsUp.svg": () => import("./ThumbsUp-C1j6zY2j.js"), "./Trash.svg": () => import("./Trash-BpA3zWPD.js"), "./Unlock.svg": () => import("./Unlock-HVYHMLxl.js"), "./Upload.svg": () => import("./Upload-D_pwqBDY.js"), "./User.svg": () => import("./User-BLGkPc5I.js"), "./programming-framework-angular.svg": () => import("./programming-framework-angular-DD4Vjgbk.js"), "./programming-framework-astro.svg": () => import("./programming-framework-astro-CLfrRt19.js"), "./programming-framework-laravel.svg": () => import("./programming-framework-laravel-kAy2wVLy.js"), "./programming-framework-nextdotjs.svg": () => import("./programming-framework-nextdotjs-BKdd_DY_.js"), "./programming-framework-react.svg": () => import("./programming-framework-react-PDgmtZuN.js"), "./programming-framework-vuedotjs.svg": () => import("./programming-framework-vuedotjs-Cim7D5tw.js"), "./programming-language-c.svg": () => import("./programming-language-c-hPGu2Zvg.js"), "./programming-language-clojure.svg": () => import("./programming-language-clojure-uqYXn7U6.js"), "./programming-language-csharp.svg": () => import("./programming-language-csharp-CGxYkVA6.js"), "./programming-language-css3.svg": () => import("./programming-language-css3-Dpp4Cr6b.js"), "./programming-language-go.svg": () => import("./programming-language-go-CuKo8iD9.js"), "./programming-language-html5.svg": () => import("./programming-language-html5-DlqJK4EL.js"), "./programming-language-http.svg": () => import("./programming-language-http-f3NXC-Ae.js"), "./programming-language-java.svg": () => import("./programming-language-java-BBodetdf.js"), "./programming-language-javascript.svg": () => import("./programming-language-javascript-VxLvi1QG.js"), "./programming-language-json.svg": () => import("./programming-language-json-Dq_K-q5f.js"), "./programming-language-kotlin.svg": () => import("./programming-language-kotlin-eTASnmL3.js"), "./programming-language-node.svg": () => import("./programming-language-node-oucaVOgY.js"), "./programming-language-objc.svg": () => import("./programming-language-objc-CPgQxmNi.js"), "./programming-language-ocaml.svg": () => import("./programming-language-ocaml-Q1-Jv5Q5.js"), "./programming-language-php.svg": () => import("./programming-language-php-GY38f8r4.js"), "./programming-language-powershell.svg": () => import("./programming-language-powershell-xLOxAYP_.js"), "./programming-language-python.svg": () => import("./programming-language-python-Ct-_kNjo.js"), "./programming-language-r.svg": () => import("./programming-language-r-Ch3T1qiC.js"), "./programming-language-ruby.svg": () => import("./programming-language-ruby-DhdM4d7g.js"), "./programming-language-scala.svg": () => import("./programming-language-scala-BVg0dToJ.js"), "./programming-language-shell.svg": () => import("./programming-language-shell-uj1zoCVW.js"), "./programming-language-swift.svg": () => import("./programming-language-swift-Dn72xPjg.js"), "./programming-language-typescript.svg": () => import("./programming-language-typescript-CdF-HuRi.js"), "./programming-script-code.svg": () => import("./programming-script-code-CUHv6qR8.js"), "./programming-tool-git.svg": () => import("./programming-tool-git-C-BMJCAo.js"), "./programming-tool-tailwindcss.svg": () => import("./programming-tool-tailwindcss-xjXi0E6g.js") }), G = (r) => {
+  const t = `./${r}.svg`;
+  return V[t] ? re(V[t]) : (console.warn(`Could not find icon: ${r}`), null);
+}, Ke = ["src"], H = /* @__PURE__ */ _({
+  __name: "ScalarIcon",
+  props: {
+    icon: {},
+    size: {}
+  },
+  setup(r) {
+    const t = r, e = L({
+      variants: {
+        size: {
+          xs: "size-3 stroke-[1.4]",
+          sm: "size-3.5 stroke-[1.2]",
+          md: "size-4 stroke-[1.1]",
+          lg: "size-5",
+          xl: "size-6 stroke-[0.96]",
+          "2xl": "size-8 stroke-[0.92]",
+          "3xl": "size-10 stroke-[0.9]",
+          full: "size-full"
+        }
+      },
+      defaultVariants: {
+        size: "full"
+      }
+    }), a = G(t.icon);
+    return (d, c) => o(a) ? (u(), $(X(o(G)(d.icon)), {
+      key: 0,
+      class: y(o(w)("scalar-icon", o(e)({ size: d.size })))
+    }, null, 8, ["class"])) : (u(), b("img", {
+      key: 1,
+      src: d.icon
+    }, null, 8, Ke));
+  }
+}), Ye = ["ariaDisabled"], Je = { class: "sr-only" }, Ze = /* @__PURE__ */ _({
+  __name: "ScalarIconButton",
+  props: {
+    label: {},
+    icon: {},
+    disabled: { type: Boolean },
+    variant: { default: "ghost" },
+    size: { default: "md" }
+  },
+  setup(r) {
+    const t = L({
+      base: "scalar-icon-button grid aspect-square cursor-pointer rounded",
+      variants: {
+        size: {
+          xxs: "size-3.5 p-0.5",
+          xs: "size-5 p-1",
+          sm: "size-6 p-1",
+          md: "size-10 p-3",
+          full: "h-full w-full"
+        },
+        disabled: {
+          true: "cursor-not-allowed shadow-none"
+        },
+        variant: J
+      }
+    }), e = k(() => {
+      const { class: a, ...d } = z();
+      return { class: a || "", rest: d };
+    });
+    return (a, d) => (u(), b("button", C(e.value.rest, {
+      ariaDisabled: a.disabled || void 0,
+      class: o(w)(o(t)({ size: a.size, variant: a.variant, disabled: a.disabled }), e.value.class),
+      type: "button"
+    }), [
+      x(o(H), { icon: a.icon }, null, 8, ["icon"]),
+      f("span", Je, T(a.label), 1)
+    ], 16, Ye));
+  }
+}), Qe = { class: "inline-block min-w-0 flex-1 truncate" }, et = /* @__PURE__ */ f("div", { class: "absolute inset-0 -z-1 rounded bg-back-1 shadow-md brightness-lifted" }, null, -1), Dt = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarListbox",
+  props: {
+    options: {},
+    modelValue: {},
+    placement: {},
+    resize: { type: Boolean }
+  },
+  emits: ["update:modelValue"],
+  setup(r) {
+    const t = L({
+      base: [
+        // Layout
+        "flex min-w-0 items-center gap-2 rounded px-2.5 py-1.5 text-left",
+        "first-of-type:mt-0.75 last-of-type:mb-0.75",
+        // Text / background style
+        "truncate bg-transparent text-xs font-medium text-fore-2",
+        // Interaction
+        "cursor-pointer hover:bg-back-2 hover:text-fore-1"
+      ],
+      variants: {
+        selected: { true: "text-fore-1" },
+        active: { true: "bg-back-2 text-fore-1" },
+        disabled: { true: "pointer-events-none opacity-50" }
+      }
+    });
+    return (e, a) => (u(), $(o(he), {
+      as: "div",
+      modelValue: e.modelValue,
+      "onUpdate:modelValue": a[0] || (a[0] = (d) => e.$emit("update:modelValue", d))
+    }, {
+      default: v(() => [
+        x(o(B), {
+          placement: e.placement ?? "bottom-start",
+          resize: e.resize
+        }, {
+          floating: v(({ width: d }) => [
+            x(o(ve), C({
+              class: "scalar-component relative flex w-40 flex-col p-0.75",
+              style: { width: d }
+            }, e.$attrs), {
+              default: v(() => [
+                (u(!0), b(W, null, se(e.options, (c) => (u(), $(o(be), {
+                  key: c.id,
+                  as: "template",
+                  disabled: c.disabled,
+                  value: c
+                }, {
+                  default: v(({ active: s, selected: p }) => [
+                    f("li", {
+                      class: y(
+                        o(w)(o(t)({ active: s, selected: p, disabled: c.disabled }))
+                      )
+                    }, [
+                      f("span", Qe, T(c.label), 1),
+                      p ? (u(), $(o(H), {
+                        key: 0,
+                        icon: "Checkmark",
+                        size: "sm"
+                      })) : N("", !0)
+                    ], 2)
+                  ]),
+                  _: 2
+                }, 1032, ["disabled", "value"]))), 128)),
+                et
+              ]),
+              _: 2
+            }, 1040, ["style"])
+          ]),
+          default: v(() => [
+            x(o(Se), { as: "template" }, {
+              default: v(() => [
+                S(e.$slots, "default")
+              ]),
+              _: 3
+            })
+          ]),
+          _: 3
+        }, 8, ["placement", "resize"])
+      ]),
+      _: 3
+    }, 8, ["modelValue"]));
+  }
+}), Ot = () => F({
+  open: !1,
+  show() {
+    this.open = !0;
+  },
+  hide() {
+    this.open = !1;
+  }
+}), tt = /* @__PURE__ */ _({
+  __name: "ScalarModal",
+  props: {
+    state: {},
+    title: {},
+    bodyClass: {},
+    maxWidth: {},
+    size: { default: "md" },
+    variant: {}
+  },
+  setup(r) {
+    const t = L({
+      base: [
+        "scalar-modal",
+        "col leading-snug relative mx-auto mb-0 mt-20 w-full rounded-lg bg-back-2 text-left text-fore-1 opacity-0"
+      ].join(" "),
+      variants: {
+        size: {
+          xs: "max-w-screen-xs",
+          sm: "max-w-screen-sm",
+          md: "max-w-screen-md",
+          lg: "max-w-screen-lg"
+        },
+        variant: {
+          history: "scalar-modal-history bg-back-1",
+          search: "scalar-modal-search"
+        }
+      }
+    });
+    return (e, a) => (u(), $(o(ye), {
+      open: e.state.open,
+      onClose: a[0] || (a[0] = (d) => e.state.hide())
+    }, {
+      default: v(() => [
+        f("div", {
+          class: y(
+            o(w)(
+              "scalar-modal-layout fixed left-0 top-0",
+              "z-[1001] h-[100dvh] w-[100dvw]",
+              "bg-backdrop p-5 opacity-0"
+            )
+          )
+        }, [
+          x(o(_e), {
+            class: y(o(t)({ size: e.size, variant: e.variant })),
+            style: q({ maxWidth: e.maxWidth })
+          }, {
+            default: v(() => [
+              e.title ? (u(), $(o(ke), {
+                key: 0,
+                class: y(["scalar-modal-header font-semiBold m-0 rounded-lg px-6 py-3 text-left text-xs text-fore-1", { "pb-0 pt-6": e.variant === "history" }])
+              }, {
+                default: v(() => [
+                  K(T(e.title), 1)
+                ]),
+                _: 1
+              }, 8, ["class"])) : N("", !0),
+              x(o(we), {
+                class: y([
+                  "scalar-modal-body relative max-h-[calc(100dvh-240px)] overflow-y-auto rounded-lg bg-back-1 px-6 pb-4 pt-6",
+                  o(w)(
+                    e.bodyClass,
+                    e.variant === "history" && "pt-3",
+                    e.variant === "search" && "col max-h-[440px] overflow-hidden p-0"
+                  )
+                ])
+              }, {
+                default: v(() => [
+                  S(e.$slots, "default", {}, void 0, !0)
+                ]),
+                _: 3
+              }, 8, ["class"])
+            ]),
+            _: 3
+          }, 8, ["class", "style"])
+        ], 2)
+      ]),
+      _: 3
+    }, 8, ["open"]));
+  }
+}), Pt = /* @__PURE__ */ P(tt, [["__scopeId", "data-v-ff85ced0"]]), at = /* @__PURE__ */ f("div", { class: "absolute inset-0 -z-1 rounded bg-back-1 shadow-md brightness-lifted" }, null, -1), Bt = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarPopover",
+  props: {
+    placement: {},
+    resize: { type: Boolean }
+  },
+  setup(r) {
+    return (t, e) => (u(), $(o(Ee), null, {
+      default: v(() => [
+        x(o(B), oe(ne(t.$props)), {
+          floating: v(({ width: a, height: d }) => [
+            x(o(xe), C({
+              class: "relative flex flex-col p-0.75",
+              style: { width: a, height: d }
+            }, t.$attrs), {
+              default: v(() => [
+                S(t.$slots, "popover"),
+                at
+              ]),
+              _: 2
+            }, 1040, ["style"])
+          ]),
+          default: v(() => [
+            x(o($e), { as: "template" }, {
+              default: v(() => [
+                S(t.$slots, "default")
+              ]),
+              _: 3
+            })
+          ]),
+          _: 3
+        }, 16)
+      ]),
+      _: 3
+    }));
+  }
+}), rt = { class: "sr-only" }, st = ["value"], Ht = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarSearchInput",
+  props: {
+    loading: {},
+    modelValue: {}
+  },
+  emits: ["update:modelValue"],
+  setup(r, { emit: t }) {
+    const e = t;
+    function a(c) {
+      e("update:modelValue", c.target.value);
+    }
+    const d = k(() => {
+      const { class: c, ...s } = z();
+      return { className: c || "", rest: s };
+    });
+    return (c, s) => (u(), b("label", C(d.value.rest, {
+      class: o(w)(
+        "flex rounded border bg-back-1 text-sm font-medium focus-within:border-fore-1",
+        d.value.className
+      )
+    }), [
+      f("span", rt, [
+        S(c.$slots, "label", {}, () => [
+          K("Enter search")
+        ])
+      ]),
+      f("input", {
+        autocapitalize: "off",
+        autocomplete: "off",
+        autocorrect: "off",
+        class: "flex-1 rounded bg-transparent p-3 outline-none",
+        placeholder: "Search...",
+        spellcheck: "false",
+        type: "text",
+        value: c.modelValue,
+        onInput: a
+      }, null, 40, st),
+      c.loading && c.loading.isLoading ? (u(), $(o(Y), {
+        key: 0,
+        class: "mr-3 self-center",
+        loadingState: c.loading,
+        size: "20px"
+      }, null, 8, ["loadingState"])) : c.modelValue ? (u(), $(o(Ze), {
+        key: 1,
+        class: "self-center",
+        icon: "Close",
+        label: "Clear Search",
+        size: "md",
+        onClick: s[0] || (s[0] = (p) => e("update:modelValue", ""))
+      })) : N("", !0)
+    ], 16));
+  }
+}), ot = /* @__PURE__ */ f("div", { class: "flex flex-col items-center gap-2 px-3 py-4" }, [
+  /* @__PURE__ */ f("div", { class: "rotate-90 text-lg font-bold" }, ":("),
+  /* @__PURE__ */ f("div", { class: "text-sm font-medium text-fore-2" }, "No results found")
+], -1), Mt = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarSearchResultList",
+  props: {
+    noResults: { type: Boolean }
+  },
+  setup(r) {
+    const t = k(() => {
+      const { class: e, ...a } = z();
+      return { className: e || "", rest: a };
+    });
+    return (e, a) => (u(), b("ul", C(t.value.rest, {
+      class: o(w)("flex flex-col", t.value.className)
+    }), [
+      e.noResults ? S(e.$slots, "noResults", { key: 0 }, () => [
+        ot
+      ]) : N("", !0),
+      S(e.$slots, "default")
+    ], 16));
+  }
+}), nt = { class: "contents" }, it = { class: "text-fore-3 group-hover:text-fore-1" }, lt = { class: "flex min-w-0 flex-1 flex-col gap-0.75" }, dt = { class: "flex items-center gap-1" }, ct = { class: "flex-1 truncate text-sm font-medium" }, pt = {
+  key: 0,
+  class: "text-xs text-fore-2"
+}, ut = { class: "truncate text-xs text-fore-2" }, Vt = /* @__PURE__ */ _({
+  inheritAttrs: !1,
+  __name: "ScalarSearchResultItem",
+  props: {
+    icon: {},
+    active: { type: Boolean }
+  },
+  setup(r) {
+    const t = k(() => {
+      const { class: e, ...a } = z();
+      return { className: e || "", rest: a };
+    });
+    return (e, a) => (u(), b("li", nt, [
+      f("a", C(t.value.rest, {
+        class: o(w)(
+          "group flex cursor-pointer gap-3 rounded px-3 py-1.5 no-underline hover:bg-back-2",
+          {
+            "bg-back-2": e.active
+          },
+          t.value.className
+        )
+      }), [
+        f("div", it, [
+          S(e.$slots, "icon", {}, () => [
+            e.icon ? (u(), $(o(H), {
+              key: 0,
+              icon: e.icon,
+              size: "sm"
+            }, null, 8, ["icon"])) : N("", !0)
+          ])
+        ]),
+        f("div", lt, [
+          f("div", dt, [
+            f("div", ct, [
+              S(e.$slots, "default")
+            ]),
+            e.$slots.addon ? (u(), b("div", pt, [
+              S(e.$slots, "addon")
+            ])) : N("", !0)
+          ]),
+          f("div", ut, [
+            S(e.$slots, "description")
+          ])
+        ])
+      ], 16)
+    ]));
+  }
+}), mt = { class: "scalar-input-container relative" }, gt = ["for"], ft = { class: "icon-slot cursor-pointer text-ghost hover:text-fore-1 !empty:flex !empty:w-7 !empty:items-center !empty:pr-3" }, ht = /* @__PURE__ */ _({
+  __name: "ScalarTextField",
+  props: {
+    modelValue: {},
+    placeholder: {},
+    label: {},
+    labelShadowColor: { default: "var(--scalar-background-2)" },
+    error: { type: Boolean },
+    isMultiline: { type: Boolean },
+    helperText: {},
+    emitOnBlur: { type: Boolean, default: !0 },
+    handleFieldSubmit: {},
+    handleFieldChange: {},
+    disableTrim: { type: Boolean, default: !1 }
+  },
+  emits: ["submit", "update:modelValue"],
+  setup(r, { emit: t }) {
+    const e = r, a = t, d = L({
+      base: "scalar-input-wrapper relative flex items-center rounded border border-solid border-border",
+      variants: {
+        focus: {
+          true: "scalar-input-wrapper-focus border-fore-3 has-actv-btn:border has-actv-btn:border-border"
+        },
+        error: { true: "scalar-input-wrapper-error border-error" }
+      }
+    }), c = z(), s = c.id || `id-${ze()}`, p = A(), i = A(!1);
+    let g;
+    if (e.isMultiline) {
+      const { triggerResize: l } = Te({
+        element: p,
+        input: e.modelValue
+      });
+      g = l;
+    }
+    function m(l) {
+      const E = l.target.value;
+      e.isMultiline && g(), e.handleFieldChange ? e.handleFieldChange(E) : a("update:modelValue", E);
+    }
+    function n(l) {
+      const E = l.target, I = e.disableTrim || e.isMultiline ? E.value : E.value.trim();
+      e.handleFieldSubmit ? e.handleFieldSubmit(I) : a("submit", I);
+    }
+    function h(l) {
+      i.value = !1, e.emitOnBlur && e.modelValue && n(l);
+    }
+    return j(() => {
+      var l;
+      Object.prototype.hasOwnProperty.call(c, "autofocus") && ((l = p.value) == null || l.focus());
+    }), (l, E) => (u(), b("div", mt, [
+      f("div", {
+        class: y(o(d)({ error: l.error, focus: i.value }))
+      }, [
+        (u(), $(X(l.isMultiline ? "textarea" : "input"), C({ id: o(s) }, l.$attrs, {
+          ref_key: "input",
+          ref: p,
+          class: [
+            "scalar-input",
+            o(w)(
+              { "min-h-[77px]": l.isMultiline },
+              "z-10 w-full resize-none appearance-none border-0 bg-transparent p-3 text-sm text-fore-1",
+              "outline-none transition-opacity"
+            )
+          ],
+          placeholder: l.placeholder,
+          value: l.modelValue,
+          onBlur: h,
+          onFocus: E[0] || (E[0] = (I) => i.value = !0),
+          onInput: m,
+          onKeyup: ie(n, ["enter"])
+        }), null, 16, ["id", "class", "placeholder", "value"])),
+        l.label ? (u(), b("label", {
+          key: 0,
+          class: y(
+            o(w)(
+              "scalar-input-label pointer-events-none absolute left-0 top-0 mx-2 my-3 px-1 text-xs",
+              "shadow-current z-10 origin-top-left rounded text-fore-3 transition-transform"
+            )
+          ),
+          for: o(s),
+          style: q({
+            "box-shadow": `0 0 4px 4px ${l.labelShadowColor}`,
+            "background-color": l.labelShadowColor
+          })
+        }, T(l.label), 15, gt)) : N("", !0),
+        f("div", ft, [
+          S(l.$slots, "default", {}, void 0, !0)
+        ])
+      ], 2),
+      f("span", {
+        class: y(
+          o(w)(
+            "helper-text before:rounded-full mt-1.5 flex items-center text-xs text-error before:font-black",
+            "before:mr-1.5 before:block before:h-4 before:w-4 before:text-center before:text-xxs before:leading-4",
+            "before:bg-error before:text-white before:content-['!'] empty:hidden"
+          )
+        )
+      }, T(l.helperText), 3)
+    ]));
+  }
+}), Gt = /* @__PURE__ */ P(ht, [["__scopeId", "data-v-4fc2339e"]]);
+export {
+  It as ScalarButton,
+  Lt as ScalarCodeBlock,
+  Tt as ScalarDropdown,
+  zt as ScalarDropdownDivider,
+  Rt as ScalarDropdownItem,
+  B as ScalarFloating,
+  H as ScalarIcon,
+  Ze as ScalarIconButton,
+  Dt as ScalarListbox,
+  Y as ScalarLoading,
+  Pt as ScalarModal,
+  Bt as ScalarPopover,
+  Ht as ScalarSearchInput,
+  Vt as ScalarSearchResultItem,
+  Mt as ScalarSearchResultList,
+  Gt as ScalarTextField,
+  Ct as useLoadingState,
+  Ot as useModal
+};

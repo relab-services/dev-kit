@@ -1,0 +1,1 @@
+{"version":3,"file":"provideSymbols.d.ts","sourceRoot":"","sources":["../../src/helpers/provideSymbols.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,wBAAwB,CAAA;AACvD,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,KAAK,CAAA;AAEvC;;GAEG;AACH,eAAO,MAAM,sBAAsB,qBAC3B,UAAU,yBAAyB,EAAE,GAAG,SAAS,CACxD,CAAA;AAED,eAAO,MAAM,2BAA2B,qBAChC,OAAO,GAAG,SAAS,CAC1B,CAAA"}

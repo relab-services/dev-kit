@@ -1,0 +1,16 @@
+import type { ServerState } from '../types';
+export declare const createEmptyServerState: () => ServerState;
+export declare const useServerStore: () => {
+    server: {
+        selectedServer: number | null;
+        description?: string | undefined;
+        servers: {
+            url: string;
+            description?: string | undefined;
+            variables?: import("../types").ServerVariables | undefined;
+        }[];
+        variables: import("../types").Variable[];
+    };
+    setServer: (newState: Partial<ServerState>) => void;
+};
+//# sourceMappingURL=useServerStore.d.ts.map

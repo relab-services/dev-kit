@@ -1,0 +1,116 @@
+declare const _default: {
+    darkMode: ["selector", string];
+    presets: any[];
+    theme: {
+        borderRadius: {
+            DEFAULT: string;
+            md: string;
+            lg: string;
+            xl: string;
+            full: string;
+        };
+        boxShadow: {
+            DEFAULT: string;
+            lg: string;
+            md: string;
+            sm: string;
+            none: string;
+        };
+        fontFamily: {
+            DEFAULT: string;
+            code: string;
+        };
+        fontSize: {
+            '3xs': string;
+            xxs: string;
+            xs: string;
+            sm: string;
+            base: string;
+            lg: string;
+            xl: string;
+        };
+        fontWeight: {
+            DEFAULT: string;
+            medium: string;
+            bold: string;
+        };
+        colors: {
+            current: string;
+            b: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                accent: string;
+                btn: string;
+            };
+            c: {
+                1: string;
+                2: string;
+                3: string;
+                accent: string;
+                ghost: string;
+                disabled: string;
+                btn: string;
+            };
+            h: {
+                btn: string;
+            };
+            backdrop: string;
+            border: string;
+            brand: string;
+            green: string;
+            red: string;
+            yellow: string;
+            blue: string;
+            orange: string;
+            purple: string;
+            grey: string;
+            indigo: string;
+            pink: string;
+            error: string;
+            white: string;
+            transparent: string;
+        };
+        lineHeight: {
+            none: string;
+            tight: string;
+            snug: string;
+            normal: string;
+            relaxed: string;
+            loose: string;
+            DEFAULT: string;
+            1: string;
+            2: string;
+            3: string;
+            4: string;
+            5: string;
+        };
+        screens: {
+            xs: string;
+            sm: string;
+            md: string;
+            lg: string;
+            xl: string;
+        };
+        zIndex: {
+            '-1': string;
+            '0': string;
+            '1': string;
+        };
+        extend: {
+            borderColor: {
+                DEFAULT: string;
+            };
+            borderWidth: {
+                DEFAULT: string;
+            };
+            brightness: {
+                lifted: string;
+                backdrop: string;
+            };
+        };
+    };
+};
+export default _default;
+//# sourceMappingURL=tailwind.d.ts.map

@@ -1,0 +1,3 @@
+import type { ReferenceConfiguration } from '../types';
+export declare function useDeprecationWarnings(configuration: ReferenceConfiguration): void;
+//# sourceMappingURL=useDeprecationWarnings.d.ts.map

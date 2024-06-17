@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/components/Layouts/index.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,KAAK,CAAA;AAEvC,OAAO,KAAK,EAAE,mBAAmB,EAAE,MAAM,aAAa,CAAA;AACtD,OAAO,KAAK,UAAU,MAAM,kBAAkB,CAAA;AAI9C,QAAA,MAAM,OAAO,EAAE,YAAY,CAAC;KACzB,CAAC,IAAI,mBAAmB,GAAG,OAAO,UAAU;CAC9C,CAGA,CAAA;AAED,eAAe,OAAO,CAAA"}

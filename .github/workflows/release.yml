@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - _master
+      - master
 jobs:
   release:
     permissions:

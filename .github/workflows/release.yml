@@ -83,4 +83,4 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(steps.changesets.outputs);
+            console.log(github.context.steps.changesets.outputs);

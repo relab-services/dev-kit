@@ -1,5 +1,18 @@
 # @relab/fastify-kit
 
+## 1.0.7
+
+### Patch Changes
+
+-   f68b040: Get rid of `Show release info` step
+-   f68b040: Fixing release info display
+-   140637d: Show release info and cleanup the folders
+-   Updated dependencies [f68b040]
+-   Updated dependencies [f68b040]
+-   Updated dependencies [140637d]
+    -   @relab/fastify-health-check@1.0.7
+    -   @relab/graceful-shutdown@1.0.10
+
 ## 1.0.6
 
 ### Patch Changes

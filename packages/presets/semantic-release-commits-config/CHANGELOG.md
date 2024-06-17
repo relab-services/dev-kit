@@ -1,5 +1,13 @@
 # @relab/semantic-release-commits-config
 
+## 0.0.6
+
+### Patch Changes
+
+-   f68b040: Get rid of `Show release info` step
+-   f68b040: Fixing release info display
+-   140637d: Show release info and cleanup the folders
+
 ## 0.0.5
 
 ### Patch Changes

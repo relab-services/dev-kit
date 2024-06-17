@@ -1,5 +1,11 @@
 # @relab/graceful-shutdown
 
+## 1.0.11
+
+### Patch Changes
+
+-   d6c5564: Package linting added to CI
+
 ## 1.0.10
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @relab/eslint-config
 
+## 2.2.10
+
+### Patch Changes
+
+- d6c5564: Package linting added to CI
+
 ## 2.2.9
 
 ### Patch Changes

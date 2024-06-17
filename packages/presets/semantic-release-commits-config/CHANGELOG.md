@@ -1,5 +1,11 @@
 # @relab/semantic-release-commits-config
 
+## 0.0.7
+
+### Patch Changes
+
+-   d6c5564: Package linting added to CI
+
 ## 0.0.6
 
 ### Patch Changes

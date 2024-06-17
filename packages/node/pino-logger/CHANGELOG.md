@@ -1,5 +1,13 @@
 # @relab/pino-logger
 
+## 1.0.8
+
+### Patch Changes
+
+-   d6c5564: Package linting added to CI
+-   Updated dependencies [d6c5564]
+    -   @relab/fastify-correlation-id@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes

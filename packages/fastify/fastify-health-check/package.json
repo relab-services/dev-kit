@@ -1,6 +1,6 @@
 {
   "name": "@relab/fastify-health-check",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",

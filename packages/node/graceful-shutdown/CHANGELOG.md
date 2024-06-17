@@ -1,5 +1,13 @@
 # @relab/graceful-shutdown
 
+## 1.0.10
+
+### Patch Changes
+
+-   f68b040: Get rid of `Show release info` step
+-   f68b040: Fixing release info display
+-   140637d: Show release info and cleanup the folders
+
 ## 1.0.9
 
 ### Patch Changes

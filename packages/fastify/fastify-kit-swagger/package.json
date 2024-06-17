@@ -1,6 +1,6 @@
 {
   "name": "@relab/fastify-kit-swagger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -71,8 +71,8 @@
     "zod": "3.23.8"
   },
   "peerDependencies": {
-    "@relab/fastify-kit": ">=1.0.6",
-    "@relab/fastify-kit-errors-handling": ">=1.0.5",
+    "@relab/fastify-kit": ">=1.0.7",
+    "@relab/fastify-kit-errors-handling": ">=1.0.6",
     "fastify-type-provider-zod": ">= 1",
     "zod": ">= 3"
   },

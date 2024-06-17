@@ -1,5 +1,11 @@
 # @relab/node-welcome
 
+## 1.0.8
+
+### Patch Changes
+
+-   d6c5564: Package linting added to CI
+
 ## 1.0.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @relab/winston-logger
 
+## 1.0.9
+
+### Patch Changes
+
+-   d6c5564: Package linting added to CI
+
 ## 1.0.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@relab/react-modals",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Utility package to handle modals in React",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.js",

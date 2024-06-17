@@ -1,5 +1,14 @@
 # @relab/fastify-kit-api-key
 
+## 1.0.7
+
+### Patch Changes
+
+-   d6c5564: Package linting added to CI
+-   Updated dependencies [d6c5564]
+-   Updated dependencies [2643ad6]
+    -   @relab/fastify-kit@1.0.8
+
 ## 1.0.6
 
 ### Patch Changes

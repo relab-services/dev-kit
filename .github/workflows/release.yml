@@ -77,10 +77,3 @@ jobs:
         shell: bash
         run: |
           echo "Version published"
-
-      - name: Show release info
-        uses: actions/github-script@v3
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            console.log(github.context.steps.changesets.outputs);

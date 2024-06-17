@@ -1,0 +1,46 @@
+import type { ContentType, TransformedOperation } from './types';
+/**
+ * Get the request body from the operation.
+ */
+export declare function getRequestBodyFromOperation(operation: TransformedOperation, selectedExampleKey?: string | number): {
+    postData: {
+        mimeType: string;
+        text: any;
+        params?: undefined;
+    };
+    headers?: undefined;
+} | {
+    postData: {
+        mimeType: string;
+        params: {
+            name: string;
+            value: string | number | Record<string, any>;
+        }[];
+        text?: undefined;
+    };
+    headers?: undefined;
+} | {
+    postData: undefined;
+    headers?: undefined;
+} | {
+    headers: {
+        name: string;
+        value: ContentType;
+    }[];
+    postData: {
+        mimeType: string;
+        text: any;
+        params?: undefined;
+    };
+} | {
+    headers: {
+        name: string;
+        value: ContentType;
+    }[];
+    postData: {
+        mimeType: string;
+        text?: undefined;
+        params?: undefined;
+    };
+} | undefined;
+//# sourceMappingURL=getRequestBodyFromOperation.d.ts.map

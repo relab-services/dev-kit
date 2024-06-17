@@ -1,0 +1,58 @@
+import type { ClientRequestConfig, RequestResult } from '../types';
+type RequestHistoryEntry = RequestResult;
+export declare const useRequestStore: () => {
+    readOnly: import("vue").Ref<boolean>;
+    activeRequest: {
+        id?: string | undefined;
+        name?: string | undefined;
+        url: string;
+        type: string;
+        path: string;
+        variables?: {
+            name: string;
+            description?: string | null | undefined;
+            value: string | number | Record<string, any>;
+            required?: boolean | undefined;
+            enabled: boolean;
+        }[] | undefined;
+        query?: {
+            name: string;
+            description?: string | null | undefined;
+            value: string | number | Record<string, any>;
+            required?: boolean | undefined;
+            enabled: boolean;
+        }[] | undefined;
+        cookies?: {
+            name: string;
+            description?: string | null | undefined;
+            value: string | number | Record<string, any>;
+            required?: boolean | undefined;
+            enabled: boolean;
+        }[] | undefined;
+        headers?: {
+            name: string;
+            description?: string | null | undefined;
+            value: string | number | Record<string, any>;
+            required?: boolean | undefined;
+            enabled: boolean;
+        }[] | undefined;
+        body?: string | undefined;
+        formData?: {
+            name: string;
+            description?: string | null | undefined;
+            value: string | number | Record<string, any>;
+            required?: boolean | undefined;
+            enabled: boolean;
+        }[] | undefined;
+    };
+    activeResponse: import("vue").ComputedRef<import("../types").ClientResponse | null>;
+    requestHistory: Record<string, RequestResult>;
+    requestHistoryOrder: import("vue").Ref<string[]>;
+    activeRequestId: import("vue").Ref<string>;
+    setActiveResponse: (historyID: string) => void;
+    resetActiveResponse: () => void;
+    addRequestToHistory: (value: RequestHistoryEntry) => void;
+    setActiveRequest: (request: ClientRequestConfig) => void;
+};
+export {};
+//# sourceMappingURL=useRequestStore.d.ts.map

@@ -1,0 +1,4 @@
+import type { TransformedOperation } from '@scalar/oas-utils';
+import type { OpenAPIV3 } from '@scalar/openapi-parser';
+export declare function openClientFor(operation: TransformedOperation, globalSecurity?: OpenAPIV3.SecurityRequirementObject[]): void;
+//# sourceMappingURL=openClientFor.d.ts.map

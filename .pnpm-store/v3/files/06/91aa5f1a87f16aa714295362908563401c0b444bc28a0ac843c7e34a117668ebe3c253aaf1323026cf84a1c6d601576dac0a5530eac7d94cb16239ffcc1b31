@@ -1,0 +1,95 @@
+import type { TransformedOperation } from '@scalar/oas-utils';
+import type { OpenAPIV3, OpenAPIV3_1 } from '@scalar/openapi-parser';
+export type OpenApiState = {
+    operation: TransformedOperation;
+    globalSecurity: OpenAPIV3.SecurityRequirementObject[] | OpenAPIV3_1.SecurityRequirementObject[];
+};
+export declare const createEmptyOpenApiState: () => OpenApiState;
+export declare const useOpenApiStore: () => {
+    openApi: {
+        operation: {
+            httpVerb: string;
+            path: string;
+            operationId?: string | undefined;
+            name?: string | undefined;
+            description?: string | undefined;
+            information?: {
+                description?: string | undefined;
+                operationId?: string | number | undefined;
+                parameters?: {
+                    name: string;
+                    in?: string | undefined;
+                    description?: string | undefined;
+                    required?: boolean | undefined;
+                    deprecated?: boolean | undefined;
+                    allowEmptyValue?: boolean | undefined;
+                    style?: "form" | "simple" | undefined;
+                    explode?: boolean | undefined;
+                    allowReserved?: boolean | undefined;
+                    schema?: {
+                        type: string;
+                        name?: string | undefined;
+                        example?: any;
+                        default?: any;
+                        format?: string | undefined;
+                        description?: string | undefined;
+                        properties?: Record<string, import("@scalar/oas-utils").Schema> | undefined;
+                    } | undefined;
+                    example?: any;
+                    examples?: (Map<string, any> & Omit<Map<string, any>, keyof Map<any, any>>) | undefined;
+                }[] | undefined;
+                responses?: Record<string, import("@scalar/oas-utils").ScalarResponse> | undefined;
+                security?: OpenAPIV3.SecurityRequirementObject[] | undefined;
+                requestBody?: {
+                    description?: string | undefined;
+                    required?: boolean | undefined;
+                    content?: import("@scalar/oas-utils").RequestBodyMimeTypes | undefined;
+                } | undefined;
+                summary?: string | undefined;
+                tags?: string[] | undefined;
+                deprecated?: boolean | undefined;
+                'x-custom-examples'?: {
+                    lang: string;
+                    label: string;
+                    source: string;
+                }[] | undefined;
+                'x-codeSamples'?: {
+                    lang: string;
+                    label: string;
+                    source: string;
+                }[] | undefined;
+                'x-code-samples'?: {
+                    lang: string;
+                    label: string;
+                    source: string;
+                }[] | undefined;
+            } | undefined;
+            pathParameters?: {
+                name: string;
+                in?: string | undefined;
+                description?: string | undefined;
+                required?: boolean | undefined;
+                deprecated?: boolean | undefined;
+                allowEmptyValue?: boolean | undefined;
+                style?: "form" | "simple" | undefined;
+                explode?: boolean | undefined;
+                allowReserved?: boolean | undefined;
+                schema?: {
+                    type: string;
+                    name?: string | undefined;
+                    example?: any;
+                    default?: any;
+                    format?: string | undefined;
+                    description?: string | undefined;
+                    properties?: Record<string, import("@scalar/oas-utils").Schema> | undefined;
+                } | undefined;
+                example?: any;
+                examples?: (Map<string, any> & Omit<Map<string, any>, keyof Map<any, any>>) | undefined;
+            }[] | undefined;
+        };
+        globalSecurity: OpenAPIV3.SecurityRequirementObject[] | OpenAPIV3_1.SecurityRequirementObject[];
+    };
+    setOperation: (newOperation: TransformedOperation | undefined) => void;
+    setGlobalSecurity: (newGlobalSecurity: OpenAPIV3_1.SecurityRequirementObject[] | undefined) => void;
+};
+//# sourceMappingURL=useOpenApiStore.d.ts.map

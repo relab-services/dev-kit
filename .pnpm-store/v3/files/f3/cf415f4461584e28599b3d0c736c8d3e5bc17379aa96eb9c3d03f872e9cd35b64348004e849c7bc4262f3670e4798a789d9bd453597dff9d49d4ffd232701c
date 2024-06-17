@@ -1,0 +1,3 @@
+import type { Ref } from 'vue';
+export declare const observeMutations: (target: Ref<HTMLElement | null>, callback: MutationCallback) => void;
+//# sourceMappingURL=mutationObserver.d.ts.map

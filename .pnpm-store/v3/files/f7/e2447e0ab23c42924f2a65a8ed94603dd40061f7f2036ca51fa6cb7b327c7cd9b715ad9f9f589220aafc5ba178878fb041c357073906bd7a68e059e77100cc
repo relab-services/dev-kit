@@ -1,0 +1,30 @@
+import type { BaseParameter } from '@scalar/oas-utils';
+import type { GeneratedParameter } from '../../types';
+declare const _default: import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<{
+    items?: BaseParameter[] | undefined;
+    generatedItems?: GeneratedParameter[] | undefined;
+    addLabel?: string | undefined;
+    showMoreFilter?: boolean | undefined;
+}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    deleteIndex: (value: number) => void;
+    addAnother: () => void;
+}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<{
+    items?: BaseParameter[] | undefined;
+    generatedItems?: GeneratedParameter[] | undefined;
+    addLabel?: string | undefined;
+    showMoreFilter?: boolean | undefined;
+}>>> & {
+    onDeleteIndex?: ((value: number) => any) | undefined;
+    onAddAnother?: (() => any) | undefined;
+}, {}, {}>;
+export default _default;
+type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
+type __VLS_TypePropsToRuntimeProps<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>;
+    } : {
+        type: import('vue').PropType<T[K]>;
+        required: true;
+    };
+};
+//# sourceMappingURL=Grid.vue.d.ts.map

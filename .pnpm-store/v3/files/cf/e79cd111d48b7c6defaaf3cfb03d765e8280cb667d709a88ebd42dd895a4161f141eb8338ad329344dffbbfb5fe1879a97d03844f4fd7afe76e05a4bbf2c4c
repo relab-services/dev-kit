@@ -1,0 +1,35 @@
+/** A component to insert the theme styles */
+export { default as ThemeStyles } from './components/ThemeStyles.vue';
+/** A scoped style reset component. */
+export { default as ResetStyles } from './components/ResetStyles.vue';
+/** A scoped scrollbar style component. */
+export { default as ScrollbarStyles } from './components/ScrollbarStyles.vue';
+/**  */
+export { migrateThemeVariables } from './utilities/legacy';
+/**
+ * Available theme IDs as a type.
+ */
+export type ThemeId = 'alternate' | 'default' | 'moon' | 'purple' | 'solarized' | 'bluePlanet' | 'deepSpace' | 'saturn' | 'kepler' | 'mars' | 'none';
+/**
+ * User readable theme names / labels
+ */
+export declare const themeLabels: Record<ThemeId, string>;
+/**
+ * List of available theme presets.
+ */
+export declare const presets: Record<Exclude<ThemeId, 'none'>, string>;
+/**
+ * List of available theme IDs.
+ */
+export declare const availableThemes: ThemeId[];
+type GetThemeOpts = {
+    /**
+     * Optional cascade layer to assign the theme styles to
+     */
+    layer?: string;
+};
+/**
+ * Get the theme CSS for a given theme ID.
+ */
+export declare const getThemeById: (themeId?: ThemeId, opts?: GetThemeOpts) => string;
+//# sourceMappingURL=index.d.ts.map

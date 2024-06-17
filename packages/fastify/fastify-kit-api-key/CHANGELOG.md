@@ -1,5 +1,19 @@
 # @relab/fastify-kit-api-key
 
+## 1.0.3
+
+### Patch Changes
+
+-   10f2e33: Caching pnpm packages with Github Actions
+-   2f656f8: Get rid of `prepack` and `prebulish` scripts. Don't need it since building the project with nx.
+-   a270f54: PNPM cache path wrong configuration in Github Actions fixed
+-   4f0fd9f: Added `id` to changesets step
+-   Updated dependencies [10f2e33]
+-   Updated dependencies [2f656f8]
+-   Updated dependencies [a270f54]
+-   Updated dependencies [4f0fd9f]
+    -   @relab/fastify-kit@1.0.4
+
 ## 1.0.2
 
 ### Patch Changes

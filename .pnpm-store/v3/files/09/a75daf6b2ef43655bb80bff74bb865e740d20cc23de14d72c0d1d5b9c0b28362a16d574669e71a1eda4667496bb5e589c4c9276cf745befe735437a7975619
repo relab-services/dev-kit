@@ -1,0 +1,4 @@
+import type { Heading } from '@scalar/oas-utils';
+export type Headings = Heading[];
+export declare const getHeadingsFromMarkdown: (input: string) => Promise<Headings>;
+//# sourceMappingURL=getHeadingsFromMarkdown.d.ts.map

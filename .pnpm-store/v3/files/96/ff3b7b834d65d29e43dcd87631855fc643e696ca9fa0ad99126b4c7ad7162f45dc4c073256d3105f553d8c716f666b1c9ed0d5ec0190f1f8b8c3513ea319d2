@@ -1,0 +1,21 @@
+import { openBlock as e, createElementBlock as n, createElementVNode as o } from "vue";
+const r = {
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "none",
+  viewBox: "0 0 12 12"
+}, c = /* @__PURE__ */ o("path", {
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  d: "M3.7 1.1h-.2c-.5 0-.9.4-.9.9v3.1c0 .5-.4.9-.9.9h-.3m6.9-4.9h.2c.5 0 .9.4.9.9v3.1c0 .5.4.9.9.9h.3m-6.9 4.9h-.2c-.5 0-.9-.4-.9-.9V6.9c0-.5-.4-.9-.9-.9h-.3m6.9 4.9h.2c.5 0 .9-.4.9-.9V6.9c0-.5.4-.9.9-.9h.3"
+}, null, -1), t = [
+  c
+];
+function l(h, s) {
+  return e(), n("svg", r, [...t]);
+}
+const m = { render: l };
+export {
+  m as default,
+  l as render
+};

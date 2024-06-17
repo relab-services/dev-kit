@@ -11,8 +11,6 @@
   "scripts": {
     "start": "serve .",
     "build": "rollup -c",
-    "prepublish": "npm run build",
-    "lint": "eslint . --ext ts,tsx",
     "format": "prettier --write \"**/*.ts*\""
   },
   "repository": {

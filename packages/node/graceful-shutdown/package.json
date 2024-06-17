@@ -15,8 +15,6 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "prepublish": "pnpm run build",
-    "prepack": "pnpm run build",
     "build": "rollup -c",
     "lint": "eslint . --ext ts,tsx",
     "format": "prettier --write \"**/*.ts*\""

@@ -15,8 +15,6 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "prepublish": "npm run build",
-    "prepack": "npm run build",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint . --ext ts,tsx",
     "format": "prettier --write \"**/*.ts*\""
   },

@@ -68,6 +68,6 @@
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@relab/fastify-kit": ">=1.0.8"
+    "@relab/fastify-kit": ">=1.0.9"
   }
 }

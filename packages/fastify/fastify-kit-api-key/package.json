@@ -1,6 +1,6 @@
 {
   "name": "@relab/fastify-kit-api-key",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -68,6 +68,6 @@
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@relab/fastify-kit": ">=1.0.4"
+    "@relab/fastify-kit": ">=1.0.5"
   }
 }

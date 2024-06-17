@@ -1,5 +1,13 @@
 # @relab/graceful-shutdown
 
+## 1.0.8
+
+### Patch Changes
+
+-   a68b84b: Update comment for version bump
+-   aa42bef: Setup cache for `.nx` folder.
+    It works the similar way like `.pnpm-store` to speed up NX builds.
+
 ## 1.0.7
 
 ### Patch Changes

@@ -78,4 +78,12 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'true'
         shell: bash
         run: |
-          echo "Version published"
+          echo "Has changesets"
+
+      - name: Version info
+        shell: bash
+        run: |
+          echo "Published: ${{ steps.changesets.outputs.published }}"
+          echo "Published packages: ${{ steps.changesets.outputs.publishedPackages }}"
+          echo "Has Changesets: ${{ steps.changesets.outputs.hasChangesets }}"
+          echo "PR#: ${{ steps.changesets.outputs.pullRequestNumber }}"

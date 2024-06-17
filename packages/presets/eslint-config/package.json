@@ -1,6 +1,6 @@
 {
   "name": "@relab/eslint-config",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "Shareable configuration for eslint",
   "packageManager": "pnpm@9.1.4",
   "scripts": {},

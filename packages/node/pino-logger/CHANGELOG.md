@@ -1,5 +1,13 @@
 # @relab/pino-logger
 
+## 1.0.6
+
+### Patch Changes
+
+-   4e6218b: Fixed key for `.nx` folder (previously used `.pnpm-store` which is wrong)
+-   Updated dependencies [4e6218b]
+    -   @relab/fastify-correlation-id@1.0.6
+
 ## 1.0.5
 
 ### Patch Changes

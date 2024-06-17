@@ -1,5 +1,11 @@
 # @relab/semantic-release-commits-config
 
+## 0.0.5
+
+### Patch Changes
+
+-   4e6218b: Fixed key for `.nx` folder (previously used `.pnpm-store` which is wrong)
+
 ## 0.0.4
 
 ### Patch Changes

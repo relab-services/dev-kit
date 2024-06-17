@@ -1,5 +1,13 @@
 # @relab/fastify-kit-errors-handling
 
+## 1.0.5
+
+### Patch Changes
+
+-   4e6218b: Fixed key for `.nx` folder (previously used `.pnpm-store` which is wrong)
+-   Updated dependencies [4e6218b]
+    -   @relab/fastify-kit@1.0.6
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @relab/node-welcome
 
+## 1.0.5
+
+### Patch Changes
+
+-   a68b84b: Update comment for version bump
+-   aa42bef: Setup cache for `.nx` folder.
+    It works the similar way like `.pnpm-store` to speed up NX builds.
+
 ## 1.0.4
 
 ### Patch Changes

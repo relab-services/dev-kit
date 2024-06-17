@@ -1,6 +1,6 @@
 {
     "name": "@relab/semantic-release-commits-config",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "semantic-release shareable config defines standards for commit name conventions",
     "packageManager": "pnpm@9.1.4",
     "main": "index.js",

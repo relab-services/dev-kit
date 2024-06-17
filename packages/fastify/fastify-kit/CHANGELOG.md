@@ -1,5 +1,17 @@
 # @relab/fastify-kit
 
+## 1.0.5
+
+### Patch Changes
+
+-   a68b84b: Update comment for version bump
+-   aa42bef: Setup cache for `.nx` folder.
+    It works the similar way like `.pnpm-store` to speed up NX builds.
+-   Updated dependencies [a68b84b]
+-   Updated dependencies [aa42bef]
+    -   @relab/fastify-health-check@1.0.5
+    -   @relab/graceful-shutdown@1.0.8
+
 ## 1.0.4
 
 ### Patch Changes

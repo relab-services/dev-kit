@@ -1,5 +1,16 @@
 # @relab/pino-logger
 
+## 1.0.5
+
+### Patch Changes
+
+-   a68b84b: Update comment for version bump
+-   aa42bef: Setup cache for `.nx` folder.
+    It works the similar way like `.pnpm-store` to speed up NX builds.
+-   Updated dependencies [a68b84b]
+-   Updated dependencies [aa42bef]
+    -   @relab/fastify-correlation-id@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes

@@ -239,6 +239,272 @@ importers:
         specifier: 3.23.8
         version: 3.23.8
 
+  packages/fastify/fastify-kit-api-key:
+    devDependencies:
+      '@relab/eslint-config':
+        specifier: workspace:*
+        version: link:../../presets/eslint-config
+      '@relab/fastify-kit':
+        specifier: workspace:*
+        version: link:../fastify-kit
+      '@relab/prettier-config':
+        specifier: workspace:*
+        version: link:../../presets/prettier-config
+      '@rollup/plugin-commonjs':
+        specifier: 26.0.1
+        version: 26.0.1(rollup@4.18.0)
+      '@rollup/plugin-json':
+        specifier: 6.1.0
+        version: 6.1.0(rollup@4.18.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 15.2.3
+        version: 15.2.3(rollup@4.18.0)
+      '@rollup/plugin-terser':
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.18.0)
+      '@rollup/plugin-typescript':
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.18.0)(tslib@2.6.3)(typescript@5.4.5)
+      '@types/node':
+        specifier: 20.14.2
+        version: 20.14.2
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
+      fastify:
+        specifier: 4.27.0
+        version: 4.27.0
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+      rollup-plugin-copy:
+        specifier: 3.5.0
+        version: 3.5.0
+      rollup-plugin-delete:
+        specifier: 2.0.0
+        version: 2.0.0
+      rollup-plugin-dts:
+        specifier: 6.1.1
+        version: 6.1.1(rollup@4.18.0)(typescript@5.4.5)
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.18.0)
+      rollup-preserve-directives:
+        specifier: 1.1.1
+        version: 1.1.1(rollup@4.18.0)
+      tslib:
+        specifier: 2.6.3
+        version: 2.6.3
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+
+  packages/fastify/fastify-kit-errors-handling:
+    devDependencies:
+      '@relab/eslint-config':
+        specifier: workspace:*
+        version: link:../../presets/eslint-config
+      '@relab/fastify-kit':
+        specifier: workspace:*
+        version: link:../fastify-kit
+      '@relab/prettier-config':
+        specifier: workspace:*
+        version: link:../../presets/prettier-config
+      '@rollup/plugin-commonjs':
+        specifier: 26.0.1
+        version: 26.0.1(rollup@4.18.0)
+      '@rollup/plugin-json':
+        specifier: 6.1.0
+        version: 6.1.0(rollup@4.18.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 15.2.3
+        version: 15.2.3(rollup@4.18.0)
+      '@rollup/plugin-terser':
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.18.0)
+      '@rollup/plugin-typescript':
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.18.0)(tslib@2.6.3)(typescript@5.4.5)
+      '@types/node':
+        specifier: 20.14.2
+        version: 20.14.2
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
+      fastify:
+        specifier: 4.27.0
+        version: 4.27.0
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+      rollup-plugin-copy:
+        specifier: 3.5.0
+        version: 3.5.0
+      rollup-plugin-delete:
+        specifier: 2.0.0
+        version: 2.0.0
+      rollup-plugin-dts:
+        specifier: 6.1.1
+        version: 6.1.1(rollup@4.18.0)(typescript@5.4.5)
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.18.0)
+      rollup-preserve-directives:
+        specifier: 1.1.1
+        version: 1.1.1(rollup@4.18.0)
+      tslib:
+        specifier: 2.6.3
+        version: 2.6.3
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/fastify/fastify-kit-health-check:
+    dependencies:
+      '@relab/fastify-health-check':
+        specifier: workspace:*
+        version: link:../fastify-health-check
+    devDependencies:
+      '@relab/eslint-config':
+        specifier: workspace:*
+        version: link:../../presets/eslint-config
+      '@relab/fastify-kit':
+        specifier: workspace:*
+        version: link:../fastify-kit
+      '@relab/prettier-config':
+        specifier: workspace:*
+        version: link:../../presets/prettier-config
+      '@rollup/plugin-commonjs':
+        specifier: 26.0.1
+        version: 26.0.1(rollup@4.18.0)
+      '@rollup/plugin-json':
+        specifier: 6.1.0
+        version: 6.1.0(rollup@4.18.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 15.2.3
+        version: 15.2.3(rollup@4.18.0)
+      '@rollup/plugin-terser':
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.18.0)
+      '@rollup/plugin-typescript':
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.18.0)(tslib@2.6.3)(typescript@5.4.5)
+      '@types/node':
+        specifier: 20.14.2
+        version: 20.14.2
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
+      fastify:
+        specifier: 4.27.0
+        version: 4.27.0
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+      rollup-plugin-copy:
+        specifier: 3.5.0
+        version: 3.5.0
+      rollup-plugin-delete:
+        specifier: 2.0.0
+        version: 2.0.0
+      rollup-plugin-dts:
+        specifier: 6.1.1
+        version: 6.1.1(rollup@4.18.0)(typescript@5.4.5)
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.18.0)
+      rollup-preserve-directives:
+        specifier: 1.1.1
+        version: 1.1.1(rollup@4.18.0)
+      tslib:
+        specifier: 2.6.3
+        version: 2.6.3
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+
+  packages/fastify/fastify-kit-swagger:
+    dependencies:
+      '@fastify/swagger':
+        specifier: 8.14.0
+        version: 8.14.0
+      '@scalar/api-reference':
+        specifier: 1.23.5
+        version: 1.23.5(nanoid@5.0.7)(postcss@8.4.38)(terser@5.31.1)(typescript@5.4.5)(unified@11.0.4)(vue-sonner@1.1.2)(vue@3.4.27(typescript@5.4.5))(yjs@13.6.15)
+      zod-to-json-schema:
+        specifier: 3.23.0
+        version: 3.23.0(zod@3.23.8)
+    devDependencies:
+      '@relab/eslint-config':
+        specifier: workspace:*
+        version: link:../../presets/eslint-config
+      '@relab/fastify-kit':
+        specifier: workspace:*
+        version: link:../fastify-kit
+      '@relab/fastify-kit-errors-handling':
+        specifier: workspace:*
+        version: link:../fastify-kit-errors-handling
+      '@relab/prettier-config':
+        specifier: workspace:*
+        version: link:../../presets/prettier-config
+      '@rollup/plugin-commonjs':
+        specifier: 26.0.1
+        version: 26.0.1(rollup@4.18.0)
+      '@rollup/plugin-json':
+        specifier: 6.1.0
+        version: 6.1.0(rollup@4.18.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 15.2.3
+        version: 15.2.3(rollup@4.18.0)
+      '@rollup/plugin-terser':
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.18.0)
+      '@rollup/plugin-typescript':
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.18.0)(tslib@2.6.3)(typescript@5.4.5)
+      '@types/node':
+        specifier: 20.14.2
+        version: 20.14.2
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
+      fastify:
+        specifier: 4.27.0
+        version: 4.27.0
+      fastify-type-provider-zod:
+        specifier: 1.2.0
+        version: 1.2.0(fastify@4.27.0)(zod@3.23.8)
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+      rollup-plugin-copy:
+        specifier: 3.5.0
+        version: 3.5.0
+      rollup-plugin-delete:
+        specifier: 2.0.0
+        version: 2.0.0
+      rollup-plugin-dts:
+        specifier: 6.1.1
+        version: 6.1.1(rollup@4.18.0)(typescript@5.4.5)
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.18.0)
+      rollup-preserve-directives:
+        specifier: 1.1.1
+        version: 1.1.1(rollup@4.18.0)
+      tslib:
+        specifier: 2.6.3
+        version: 2.6.3
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
   packages/node/graceful-shutdown:
     devDependencies:
       '@relab/eslint-config':

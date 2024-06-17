@@ -78,7 +78,7 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'true'
         shell: bash
         run: |
-          echo "Version published"
+          echo "Has changesets"
 
       - name: Version info
         shell: bash

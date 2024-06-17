@@ -33,9 +33,9 @@ jobs:
         name: Setup nx cache
         with:
           path: ${{ env.NX_CACHE_FOLDER }}
-          key: ${{ runner.os }}-pnpm-store-
+          key: ${{ runner.os }}-nx-store-
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-nx-store-
 
       - uses: actions/setup-node@v4
         with:

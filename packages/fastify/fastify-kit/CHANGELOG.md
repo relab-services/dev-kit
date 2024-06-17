@@ -1,5 +1,12 @@
 # @relab/fastify-kit
 
+## 1.0.9
+
+### Patch Changes
+
+-   dd2ac47: `Has changesets` step message changed
+-   dd2ac47: Display version info
+
 ## 1.0.8
 
 ### Patch Changes

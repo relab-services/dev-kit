@@ -1,5 +1,11 @@
 # @relab/winston-logger
 
+## 1.0.10
+
+### Patch Changes
+
+-   63028d7: Test release
+
 ## 1.0.9
 
 ### Patch Changes

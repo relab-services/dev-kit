@@ -1,5 +1,11 @@
 # @relab/react-modals
 
+## 1.1.14
+
+### Patch Changes
+
+-   63028d7: Test release
+
 ## 1.1.13
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @relab/prettier-config
 
+## 1.1.11
+
+### Patch Changes
+
+- 63028d7: Test release
+
 ## 1.1.10
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@relab/winston-logger",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Winston logger configuration",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",

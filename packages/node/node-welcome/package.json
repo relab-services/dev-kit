@@ -1,6 +1,6 @@
 {
   "name": "@relab/node-welcome",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",

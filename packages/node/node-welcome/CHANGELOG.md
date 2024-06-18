@@ -1,5 +1,11 @@
 # @relab/node-welcome
 
+## 1.0.9
+
+### Patch Changes
+
+-   63028d7: Test release
+
 ## 1.0.8
 
 ### Patch Changes

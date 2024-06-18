@@ -1,5 +1,11 @@
 # @relab/graceful-shutdown
 
+## 1.0.13
+
+### Patch Changes
+
+-   0f55880: Test release
+
 ## 1.0.12
 
 ### Patch Changes

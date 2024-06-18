@@ -1,6 +1,6 @@
 {
   "name": "@relab/graceful-shutdown",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Graceful shutdown for Node.js application",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",

@@ -1,5 +1,11 @@
 # @relab/fastify-kit
 
+## 1.0.11
+
+### Patch Changes
+
+-   ead2f73: Remove debug publish steps
+
 ## 1.0.10
 
 ### Patch Changes

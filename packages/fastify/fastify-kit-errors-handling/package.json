@@ -69,7 +69,7 @@
     "zod": "3.23.8"
   },
   "peerDependencies": {
-    "@relab/fastify-kit": ">=1.0.10",
+    "@relab/fastify-kit": ">=1.0.11",
     "zod": ">= 3"
   }
 }

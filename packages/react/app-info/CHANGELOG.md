@@ -1,5 +1,11 @@
 # @relab/app-info
 
+## 1.1.12
+
+### Patch Changes
+
+-   0f55880: Test release
+
 ## 1.1.11
 
 ### Patch Changes

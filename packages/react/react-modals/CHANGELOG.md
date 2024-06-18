@@ -1,5 +1,11 @@
 # @relab/react-modals
 
+## 1.1.15
+
+### Patch Changes
+
+-   0f55880: Test release
+
 ## 1.1.14
 
 ### Patch Changes

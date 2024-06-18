@@ -1,5 +1,11 @@
 # @relab/eslint-config
 
+## 2.2.12
+
+### Patch Changes
+
+- 0f55880: Test release
+
 ## 2.2.11
 
 ### Patch Changes

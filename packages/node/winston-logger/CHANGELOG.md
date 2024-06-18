@@ -1,5 +1,11 @@
 # @relab/winston-logger
 
+## 1.0.11
+
+### Patch Changes
+
+-   0f55880: Test release
+
 ## 1.0.10
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @relab/fastify-kit
 
+## 1.0.12
+
+### Patch Changes
+
+-   0f55880: Test release
+-   Updated dependencies [0f55880]
+    -   @relab/fastify-health-check@1.0.10
+    -   @relab/graceful-shutdown@1.0.13
+
 ## 1.0.11
 
 ### Patch Changes

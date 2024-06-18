@@ -1,5 +1,11 @@
 # @relab/fastify-health-check
 
+## 1.0.10
+
+### Patch Changes
+
+-   0f55880: Test release
+
 ## 1.0.9
 
 ### Patch Changes

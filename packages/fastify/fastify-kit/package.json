@@ -1,6 +1,6 @@
 {
   "name": "@relab/fastify-kit",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -83,7 +83,7 @@
     "zod-to-json-schema": "3.23.0"
   },
   "peerDependencies": {
-    "@relab/fastify-health-check": ">=1.0.10",
+    "@relab/fastify-health-check": ">=1.0.11",
     "@relab/graceful-shutdown": ">=1.0.13",
     "zod": ">= 3"
   }

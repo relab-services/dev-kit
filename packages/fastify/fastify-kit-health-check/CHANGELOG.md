@@ -1,5 +1,14 @@
 # @relab/fastify-kit-health-check
 
+## 1.0.10
+
+### Patch Changes
+
+-   4b95339: Test release
+-   Updated dependencies [4b95339]
+    -   @relab/fastify-health-check@1.0.11
+    -   @relab/fastify-kit@1.0.13
+
 ## 1.0.9
 
 ### Patch Changes

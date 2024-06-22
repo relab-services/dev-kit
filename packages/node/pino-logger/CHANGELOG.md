@@ -1,5 +1,12 @@
 # @relab/pino-logger
 
+## 1.0.11
+
+### Patch Changes
+
+-   Updated dependencies [4b95339]
+    -   @relab/fastify-correlation-id@1.0.11
+
 ## 1.0.10
 
 ### Patch Changes

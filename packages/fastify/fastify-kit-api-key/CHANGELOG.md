@@ -1,5 +1,13 @@
 # @relab/fastify-kit-api-key
 
+## 1.0.10
+
+### Patch Changes
+
+-   4b95339: Test release
+-   Updated dependencies [4b95339]
+    -   @relab/fastify-kit@1.0.13
+
 ## 1.0.9
 
 ### Patch Changes

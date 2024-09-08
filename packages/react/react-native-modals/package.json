@@ -1,6 +1,6 @@
 {
   "name": "@relab/react-native-modals",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Utility package to handle modals in React Native",
   "packageManager": "pnpm@9.1.4",
   "main": "lib/main.cjs.js",

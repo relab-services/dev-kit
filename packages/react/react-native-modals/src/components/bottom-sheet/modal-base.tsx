@@ -30,7 +30,7 @@ export const ModalBase: FC<ModalBaseProps> = ({ children, closable = true, handl
 
     useEffect(() => {
         const handler = BackHandler.addEventListener('hardwareBackPress', () => {
-            if (closable) onCloseRequest?.()
+            if (closable) void onCloseRequest?.()
             return true
         })
 
@@ -61,20 +61,12 @@ export const ModalBase: FC<ModalBaseProps> = ({ children, closable = true, handl
             )}
             handleComponent={
                 () => <>{handle}</> ?? EmptyHandle
-                // () => undefined
-                // () => <View className="bg-primary" style={{ height: 40 }}></View>
-
-                // handle ? (
-                //     <View style={{ borderTopLeftRadius: 8, borderTopRightRadius: 8, overflow: 'hidden' }}>
-                //         <View className="bg-inverse" style={{ height: 40, backgroundColor: '#00ff00' }}></View>
-                //     </View>
-                // ) : undefined
             }
             enableDynamicSizing={true}
             maxDynamicContentSize={Dimensions.get('window').height * 0.92}
             footerComponent={() => <Text>Footer</Text>}
             onAnimate={(_, toIndex: number) => {
-                if (toIndex === -1 && key) onCloseRequest?.()
+                if (toIndex === -1 && key) void onCloseRequest?.()
             }}
         >
             <ModalContent positionRef={positionRef}>{children}</ModalContent>

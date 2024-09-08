@@ -75,8 +75,7 @@ const buildModalContainer: (registry: ModalRegistry) => FC<{
     positionRef?: (value: SharedValue<number>) => void
     nativeModalShownRef: (value: boolean) => void
 }> =
-    // prettier-ignore
-    registry => ({ positionRef, nativeModalShownRef }) => { // eslint-disable-line react/display-name
+    registry => ({ positionRef, nativeModalShownRef }) => {
         return <ModalContainer registry={registry} positionRef={positionRef} nativeModuleShownRef={nativeModalShownRef} />
     }
 

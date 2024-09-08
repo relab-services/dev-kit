@@ -15,3 +15,4 @@ Monorepo for useful tools, plugins and extension.
 - [@relab/semantic-release-commits-config](packages/presets/semantic-release-commits-config)
 - [@relab/app-info](packages/react/app-info)
 - [@relab/react-modals](packages/react/react-modals)
+- [@relab/react-native-modals](packages/react/react-native-modals)

@@ -1,4 +1,5 @@
-export * from './components'
 export type { ModalProps, ModalDefinition } from './types'
 export { ModalRegistry } from './registry'
 export { build } from './build'
+export { useModalContainerPosition } from './hooks/use-modal-container-position'
+export * from './components'

@@ -1,5 +1,12 @@
 # @relab/react-native-modals
 
+## 1.0.5
+
+### Patch Changes
+
+-   a6a91c2: Additional components for Bottom Sheet Modal added to export
+-   ab27cb3: Bugfix: preserve `worklet` directive
+
 ## 1.0.4
 
 ### Patch Changes

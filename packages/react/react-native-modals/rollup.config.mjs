@@ -15,7 +15,7 @@ export default [
             {
                 entryFileNames: 'index.js',
                 dir: 'lib',
-                format: 'cjs',
+                format: 'esm',
                 name: 'lib',
                 preserveModules: false,
             },

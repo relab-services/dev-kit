@@ -1,6 +1,5 @@
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
-import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
 import del from 'rollup-plugin-delete'
 import {dts} from 'rollup-plugin-dts'
@@ -27,11 +26,6 @@ export default [
             commonjs(),
             typescript({tsconfig: './tsconfig.json'}),
             preserveDirectives(),
-            terser({
-                compress: {
-                    directives: false,
-                }
-            }),
         ],
     },
     {

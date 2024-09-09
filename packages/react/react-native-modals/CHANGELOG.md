@@ -1,5 +1,12 @@
 # @relab/react-native-modals
 
+## 1.0.2
+
+### Patch Changes
+
+-   2c91079: Added useModalContainerPosition() to export
+-   aa3b4ea: Get rid of subpath exports since it doesn't work
+
 ## 1.0.1
 
 ### Patch Changes

@@ -3,28 +3,11 @@
   "version": "1.0.1",
   "description": "Utility package to handle modals in React Native",
   "packageManager": "pnpm@9.1.4",
-  "main": "lib/main.cjs.js",
-  "types": "lib/types/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*.*"
   ],
-  "exports": {
-    ".": {
-      "require": "./lib/main.cjs.js",
-      "import": "./lib/main.esm.js",
-      "types": "./lib/index.d.ts"
-    },
-    "./native": {
-      "require": "./lib/native.cjs.js",
-      "import": "./lib/native.esm.js",
-      "types": "./lib/components/native/index.d.ts"
-    },
-    "./bottom-sheet": {
-      "require": "./lib/bottom-sheet.cjs.js",
-      "import": "./lib/bottom-sheet.esm.js",
-      "types": "./lib/components/bottom-sheet/index.d.ts"
-    }
-  },
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint . --ext ts,tsx",

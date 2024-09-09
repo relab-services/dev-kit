@@ -9,22 +9,11 @@ import preserveDirectives from 'rollup-preserve-directives'
 
 export default [
     {
-        input: {
-            main: 'src/index.ts',
-            'bottom-sheet': 'src/components/bottom-sheet/index.ts',
-            native: 'src/components/native/index.ts',
-        },
+        input: 'src/index.ts',
         external: ['react', 'react-native'],
         output: [
             {
-                entryFileNames: '[name].esm.js',
-                dir: 'lib',
-                format: 'es',
-                name: 'lib',
-                preserveModules: false,
-            },
-            {
-                entryFileNames: '[name].cjs.js',
+                entryFileNames: 'index.js',
                 dir: 'lib',
                 format: 'cjs',
                 name: 'lib',
@@ -44,15 +33,15 @@ export default [
             // }),
         ],
     },
-    // {
-    //     input: 'lib/types/index.d.ts',
-    //     output: [
-    //         {
-    //             file: 'lib/index.d.ts',
-    //             format: 'cjs',
-    //             name: 'types'
-    //         },
-    //     ],
-    //     plugins: [dts(), del({targets: 'lib/types', hook: 'buildEnd'})],
-    // },
+    {
+        input: 'lib/types/index.d.ts',
+        output: [
+            {
+                file: 'lib/index.d.ts',
+                format: 'cjs',
+                name: 'types'
+            },
+        ],
+        plugins: [dts(), del({targets: 'lib/types', hook: 'buildEnd'})],
+    },
 ]

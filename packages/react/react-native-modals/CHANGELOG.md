@@ -1,5 +1,11 @@
 # @relab/react-native-modals
 
+## 1.0.4
+
+### Patch Changes
+
+-   a8e6b86: Bundle minification enabled
+
 ## 1.0.3
 
 ### Patch Changes

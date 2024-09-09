@@ -27,10 +27,7 @@ export default [
             commonjs(),
             typescript({tsconfig: './tsconfig.json'}),
             preserveDirectives(),
-            // terser({
-            //     compress: {
-            //     },
-            // }),
+            terser(),
         ],
     },
     {

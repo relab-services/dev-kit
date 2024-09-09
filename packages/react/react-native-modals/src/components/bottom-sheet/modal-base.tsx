@@ -3,9 +3,9 @@ import React, { FC, PropsWithChildren, ReactNode, useEffect, useRef } from 'reac
 import { BottomSheetBackdrop, BottomSheetHandleProps, BottomSheetModal as CoreBottomSheetModal, useBottomSheetTimingConfigs } from '@gorhom/bottom-sheet'
 import { BackHandler, Dimensions, Text } from 'react-native'
 
-import { useAnimatedKeyboard } from '../../hooks/use-animated-keyboard'
 import { useModal } from '../../contexts/modal-context'
 import { useNestedModal } from '../../contexts/nested-modal-context'
+import { useAnimatedKeyboard } from '../../hooks/use-animated-keyboard'
 import { ModalContent } from '../modal-content'
 
 export type ModalBaseProps = PropsWithChildren<{
@@ -37,7 +37,6 @@ export const ModalBase: FC<ModalBaseProps> = ({ children, closable = true, handl
         return () => handler.remove()
     }, [closable, onCloseRequest])
 
-    console.log({ handle })
     return (
         <CoreBottomSheetModal
             ref={ref}
@@ -59,9 +58,7 @@ export const ModalBase: FC<ModalBaseProps> = ({ children, closable = true, handl
                     pressBehavior="none"
                 />
             )}
-            handleComponent={
-                () => <>{handle}</> ?? EmptyHandle
-            }
+            handleComponent={props => (handle ? <>{handle}</> : <EmptyHandle {...props} />)}
             enableDynamicSizing={true}
             maxDynamicContentSize={Dimensions.get('window').height * 0.92}
             footerComponent={() => <Text>Footer</Text>}

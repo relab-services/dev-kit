@@ -1,5 +1,12 @@
 # @relab/react-native-modals
 
+## 1.0.3
+
+### Patch Changes
+
+-   3496c55: Switching to ESM
+-   42ed71e: Fixing handle for Bottom Sheet modal
+
 ## 1.0.2
 
 ### Patch Changes

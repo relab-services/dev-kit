@@ -1,5 +1,11 @@
 # @relab/semantic-release-commits-config
 
+## 0.0.10
+
+### Patch Changes
+
+-   Release chore changes
+
 ## 0.0.9
 
 ### Patch Changes

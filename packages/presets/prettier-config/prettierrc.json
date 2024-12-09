@@ -12,7 +12,7 @@
   "proseWrap": "preserve",
   "embeddedLanguageFormatting": "auto",
   "singleAttributePerLine": false,
-  "importOrder": ["^(react|next)(/.+)?$", "^(node)(:.+)?$", "^(os|path|fs)(/.+)?$", "<THIRD_PARTY_MODULES>", "^@/(.+)$", "^./@(.+)$", "^[./]"],
+  "importOrder": ["^(client|server)\\-only$", "^(react|next)(/.+)?$", "^(node)(:.+)?$", "^(os|path|fs)(/.+)?$", "<THIRD_PARTY_MODULES>", "^@/(.+)$", "^./@(.+)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "importOrderGroupNamespaceSpecifiers": true,

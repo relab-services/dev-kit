@@ -1,5 +1,11 @@
 # @relab/prettier-config
 
+## 1.2.0
+
+### Minor Changes
+
+- Added supprt for `server-only` and `client-only` in sorting settings
+
 ## 1.1.12
 
 ### Patch Changes
